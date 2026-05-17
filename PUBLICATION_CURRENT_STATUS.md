@@ -1,6 +1,6 @@
 # Current Publication Status
 
-Updated: 2026-05-16
+Updated: 2026-05-17
 
 ## Bottom Line
 
@@ -26,6 +26,77 @@ currently reports `overall_status=submission_ready_candidate` with no
 The current paper should not be framed as "deep learning improves ship trajectory prediction." It should be framed as:
 
 > Simple kinematic baselines are strong on the audited real AIS protocol, and naive LSTM/Transformer baselines fail badly under the current controlled run. The contribution is the reproducible evidence chain and the cautionary benchmark result.
+
+## Public Repository and Reproducibility Status
+
+The clean public GitHub repository has been prepared and pushed:
+
+- Repository: <https://github.com/TristanLib/ais>
+- Current recommended public tag for citation/pre-DOI discussion:
+  `jon-submission-v1.2`
+- The exact final commit hash should be copied from the release tag immediately
+  before manuscript upload.
+
+The repository intentionally does not store raw NOAA AIS files, processed
+`.npz` arrays, per-sample large CSV files, model checkpoints, or virtual
+environments. This is the normal source-repository boundary, similar to a
+Node.js project not committing `node_modules/`.
+
+The public repository does include the data installation/rebuild path. The
+high-quality/JON pipeline can download the planned NOAA source dates, build the
+processed dataset, run the benchmark, run the risk-warning evaluation, generate
+submission artifacts, and audit readiness:
+
+```bash
+PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
+bash scripts/run_high_quality_pipeline.sh
+```
+
+To reproduce the current JON candidate explicitly:
+
+```bash
+PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
+DATES="2024-01-02 2024-01-09 2024-02-06 2024-03-05" \
+bash scripts/run_high_quality_pipeline.sh
+```
+
+Current interpretation:
+
+- `git clone` alone does not contain the full AIS data payload.
+- `git clone` plus the documented download command is the intended full
+  reproduction route.
+- The GitHub repository is sufficient as a code and compact evidence release,
+  but a formal paper submission should ideally cite both the GitHub tag/commit
+  and a Zenodo or equivalent archived release DOI.
+
+## Submission Cost Strategy
+
+For `The Journal of Navigation`, the recommended route is ordinary
+subscription/hybrid-journal publication, not paid Gold Open Access at first.
+
+Current fee understanding from the Cambridge author pages:
+
+- There is no separate submission fee identified in the journal instructions.
+- Gold Open Access is optional. If selected and not covered by an institutional
+  agreement, the listed APC is GBP 2610 or USD 3655, plus possible taxes.
+- Online colour figures are free.
+- Printed colour figures are charged separately at GBP 200 or USD 320 per
+  figure, with a cap of GBP 1000 or USD 1600 per article.
+
+Recommended author choice:
+
+1. Submit as a regular Research Article.
+2. Do not choose paid Gold Open Access unless an institution, funder, or
+   agreement covers the APC.
+3. Do not request printed colour figures; keep figures colour online and
+   readable in grayscale.
+4. Reserve or publish a Zenodo/GitHub release DOI before final manuscript upload
+   if possible, then cite it in Data and Code Availability.
+5. Treat professional English editing as optional. It may help, but it does not
+   guarantee acceptance and should not be bought until the authorial polish pass
+   is complete.
 
 ## Current Manuscript Assets
 

@@ -35,6 +35,24 @@ The active target is now `The Journal of Navigation`; use
 `JOURNAL_OF_NAVIGATION_SUBMISSION_ROADMAP.md` as the primary roadmap. Domestic
 Chinese submission remains a fallback branch.
 
+The clean public GitHub release is at `https://github.com/TristanLib/ais`.
+Current recommended tag is `jon-submission-v1.2`. The public repository intentionally excludes raw NOAA
+AIS files, processed arrays, checkpoints, large per-sample CSV files, and local
+environments, but it includes the data download/rebuild workflow. For full
+high-quality/JON reproduction from the public repository, use:
+
+```bash
+PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
+DATES="2024-01-02 2024-01-09 2024-02-06 2024-03-05" \
+bash scripts/run_high_quality_pipeline.sh
+```
+
+For JON submission economics, prefer regular non-Gold-OA publication unless APC
+coverage is confirmed. Do not request printed colour figures. Cite the GitHub
+tag/commit and, if created, a Zenodo or equivalent DOI in the manuscript's Data
+and Code Availability statement.
+
 The JON submission-candidate package has been generated. Current JON artifacts:
 
 - `paper/jon_manuscript.md`
@@ -90,16 +108,19 @@ PYTHON_BIN=.venv/bin/python bash scripts/run_final_experiment.sh --max-train-sam
 
 Smoke-test numbers must not be used in the paper. Publication numbers are usable only when `outputs/final/run_manifest.json` has `is_debug_run=false` and `outputs/final/publication_readiness_report.json` has `status=pass`.
 
-Run the higher-bar roadmap pipeline:
+Run the higher-bar roadmap pipeline with data download enabled:
 
 ```bash
-PYTHON_BIN=.venv/bin/python bash scripts/run_high_quality_pipeline.sh
+PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
+bash scripts/run_high_quality_pipeline.sh
 ```
 
 For infrastructure checks only:
 
 ```bash
 PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
 MAX_ROWS_PER_FILE=1000000 \
 MAX_TRAIN_SAMPLES=512 \
 MAX_TEST_SAMPLES=128 \

@@ -33,13 +33,31 @@ Generated: 2026-05-17T02:48:32.132551+00:00
 - Confirm author order and corresponding author.
 - Insert funding statement.
 - Confirm competing-interest statement.
-- Confirm whether the code/data repository will be public and insert URL/DOI if available.
+- Insert the public code URL, tag, commit hash, and DOI if available.
+- Create a GitHub release and Zenodo or equivalent archive if a DOI can be
+  obtained before submission.
 - Complete final bibliographic audit for every reference.
 - Run the authorial polish / de-template pass in `paper/jon_authorial_polish_workflow.md`.
 - Run a final language edit in British English.
 - Add suggested reviewers only after checking conflicts of interest.
 - Confirm the manuscript is not under review elsewhere and all authors approve submission.
 - Review the ScholarOne-generated PDF before final submission.
+
+## Recommended Submission Choices
+
+- Article type: Research Article.
+- Publication route: regular publication, not paid Gold Open Access, unless APC
+  coverage is confirmed.
+- APC expectation on regular route: no Gold OA APC.
+- Optional Gold OA APC if selected and not covered: GBP 2610 or USD 3655, plus
+  possible taxes.
+- Colour strategy: colour online is acceptable; do not request printed colour
+  figures. Printed colour is charged separately.
+- Code/data statement: cite `https://github.com/TristanLib/ais`,
+  `jon-submission-v1.2` or final submission tag, the exact commit, and the
+  Zenodo DOI if created.
+- Data statement: cite NOAA MarineCadastre AIS as the source; do not upload raw
+  NOAA AIS files as manuscript supplements unless the journal specifically asks.
 
 ## Official JON Constraints Tracked
 

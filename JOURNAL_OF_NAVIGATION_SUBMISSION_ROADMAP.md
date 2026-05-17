@@ -1,6 +1,6 @@
 # The Journal of Navigation Submission Roadmap
 
-Updated: 2026-05-16
+Updated: 2026-05-17
 
 ## Implementation Status
 
@@ -81,6 +81,66 @@ Core positioning:
 > framed as a deep-learning architecture paper. The contribution is an auditable
 > real-AIS evidence chain that links short-horizon trajectory prediction,
 > generalization testing, and CPA/TCPA risk-warning evaluation.
+
+## Current Public Release Status
+
+The project now has a clean public GitHub release suitable for code citation and
+reviewer access:
+
+- Repository: <https://github.com/TristanLib/ais>
+- Recommended current tag: `jon-submission-v1.2`
+- The exact final commit hash should be copied from the release tag immediately
+  before manuscript upload.
+
+The repository deliberately excludes large data artifacts, but includes the
+download and rebuild workflow. The intended full reproduction path is:
+
+```bash
+PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
+DATES="2024-01-02 2024-01-09 2024-02-06 2024-03-05" \
+bash scripts/run_high_quality_pipeline.sh
+```
+
+Before actual submission, create a stable archival citation if possible:
+
+1. Create a GitHub release from `jon-submission-v1.2` or a final submission
+   tag.
+2. Archive that release with Zenodo or an equivalent repository.
+3. Insert the DOI and commit hash into the manuscript's Data and Code
+   Availability statement.
+4. Keep NOAA AIS as the source-data citation rather than redistributing NOAA
+   raw files in Git.
+
+## Cost and Access Strategy
+
+Recommended default:
+
+> Submit as a regular Research Article and do not choose paid Gold Open Access
+> unless an institution, funder, or Cambridge open-access agreement covers the
+> charge.
+
+Current cost notes from the Cambridge author pages:
+
+- Gold Open Access is optional for this hybrid journal.
+- The listed APC is GBP 2610 or USD 3655 when Gold Open Access is selected and
+  not covered by an agreement.
+- For non-Gold-OA publication, the Gold OA APC is not applicable.
+- Online colour figures are free.
+- Printed colour figures cost GBP 200 or USD 320 per figure, capped at GBP 1000
+  or USD 1600 per article.
+
+Recommended decisions for this manuscript:
+
+1. Choose regular publication during submission unless APC funding is already
+   confirmed.
+2. Keep all figures readable in grayscale and do not request printed colour.
+3. Do not pay for optional language editing until after the authorial
+   polish/de-template pass.
+4. Use a code/data DOI to improve reproducibility credibility without paying an
+   APC.
+5. Re-check the Cambridge fee page immediately before final submission because
+   APCs and agreements can change.
 
 ## Official Submission Constraints to Respect
 
