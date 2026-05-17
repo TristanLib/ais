@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-05-17T02:48:32.132551+00:00",
+  "target_journal": "The Journal of Navigation",
+  "article_type": "Research Article",
+  "readiness_report_status": "submission_ready_candidate",
+  "blocking_gaps": [],
+  "word_count_estimate": 6152,
+  "chinese_character_count_estimate": 4278,
+  "supplementary_zip_size_mb": 0.3106880187988281,
+  "artifacts": {
+    "manuscript_md": "paper/jon_manuscript.md",
+    "chinese_manuscript_md": "paper/jon_manuscript_zh.md",
+    "chinese_interpretation_md": "paper/jon_manuscript_zh_interpretation.md",
+    "cover_letter_md": "paper/jon_cover_letter.md",
+    "checklist_md": "paper/jon_submission_checklist.md",
+    "authorial_polish_workflow_md": "paper/jon_authorial_polish_workflow.md",
+    "supplementary_md": "paper/jon_supplementary_materials.md",
+    "supplementary_zip": "paper/jon_supplementary_materials.zip",
+    "figures": {
+      "pipeline_protocol": "paper/figures/jon_pipeline_protocol.png",
+      "model_performance": "paper/figures/jon_model_performance.png",
+      "horizon_degradation": "paper/figures/jon_horizon_degradation.png",
+      "risk_warning_metrics": "paper/figures/jon_risk_warning_metrics.png",
+      "scenario_slice_errors": "paper/figures/jon_scenario_slice_errors.png",
+      "risk_case_studies": "paper/figures/jon_risk_case_studies.png"
+    }
+  },
+  "source_artifacts": {
+    "data_manifest": "outputs/audit/multiday_data_manifest.json",
+    "run_manifest": "outputs/final_multiday/run_manifest.json",
+    "model_metrics": "outputs/final_multiday/model_metrics.csv",
+    "statistical_tests": "outputs/final_multiday/statistical_tests.json",
+    "risk_metrics": "outputs/final_risk/risk_metrics.json",
+    "readiness_report": "outputs/final_submission/readiness_report.json"
+  },
+  "claim_boundary": [
+    "Supports reproducible historical AIS trajectory-prediction benchmarking.",
+    "Supports temporal and vessel-disjoint holdout results for the current artifact.",
+    "Supports AIS-derived CPA/TCPA risk-warning metrics.",
+    "Does not validate live AIS deployment.",
+    "Does not validate autonomous collision avoidance or COLREGs compliance.",
+    "Does not prove all-day, seasonal, or global generalisation."
+  ],
+  "human_before_upload": [
+    "Author names, affiliations, ORCID and email.",
+    "Funding and acknowledgements.",
+    "Final competing-interest confirmation.",
+    "Final reference/DOI audit.",
+    "Authorial polish / de-template pass without removing required AI-use disclosure.",
+    "Final language edit and ScholarOne metadata."
+  ]
+}

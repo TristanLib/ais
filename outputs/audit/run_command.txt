@@ -1,0 +1,4 @@
+timestamp=2026-05-16T12:51:18Z
+python=.venv/bin/python
+config=configs/experiment_conservative.yaml
+command=scripts/run_final_experiment.sh

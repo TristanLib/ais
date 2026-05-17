@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-05-16T14:50:24.936483+00:00",
+  "manuscript": "paper/submission_manuscript.md",
+  "references": "paper/references.bib",
+  "tables": {
+    "model_metrics": "paper/tables/high_quality_model_metrics.md",
+    "risk_warning": "paper/tables/risk_warning_metrics.md"
+  },
+  "source_artifacts": {
+    "data_manifest": "outputs/audit/multiday_data_manifest.json",
+    "model_metrics": "outputs/final_multiday/model_metrics.csv",
+    "risk_metrics": "outputs/final_risk/risk_metrics.json",
+    "readiness_report": "outputs/final_submission/readiness_report.json"
+  },
+  "readiness_status_at_generation": "submission_ready_candidate",
+  "blocking_gaps_at_generation": [],
+  "is_debug_run": false
+}

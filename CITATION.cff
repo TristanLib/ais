@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the archived release or this software record."
+title: "A Reproducible AIS Trajectory Prediction Benchmark for Navigation Risk-Warning Support"
+type: software
+authors:
+  - name: "TristanLib"
+repository-code: "https://github.com/TristanLib/ais"
+abstract: "Code, configurations, generated figures, and compact evidence artifacts for a reproducible AIS trajectory-prediction and CPA/TCPA risk-warning benchmark."
+keywords:
+  - AIS
+  - maritime navigation
+  - trajectory prediction
+  - CPA/TCPA
+  - reproducible benchmark
+license: MIT
+date-released: 2026-05-17

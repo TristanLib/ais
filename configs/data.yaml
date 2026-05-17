@@ -1,0 +1,53 @@
+# Data configuration for ship trajectory prediction
+data:
+  # Data sources
+  sources:
+    noaa_marinecadastre:
+      url_template: "https://coast.noaa.gov/htdata/CMSP/AISDataHandler/{year}/{month:02d}/AIS_{year}_{month:02d}_{day:02d}.zip"
+      regions: ["Zone01", "Zone02", "Zone03"]  # US East Coast zones
+    dma:
+      url_template: "https://web.ais.dk/aisdata/aisdk-{year}-{month:02d}-{day:02d}.csv.zip"
+      regions: ["Baltic", "NorthSea"]
+
+  # Processing parameters
+  processing:
+    # Cleaning thresholds
+    lat_range: [-90, 90]
+    lon_range: [-180, 180]
+    sog_range: [0, 50]  # knots
+    cog_range: [0, 360]  # degrees
+
+    # Resampling
+    dt_minutes: 1  # 1 minute intervals
+    interpolation_limit: 3  # max 3 consecutive interpolated points
+
+    # Trajectory slicing
+    history_minutes: 60    # H = 60 minutes input
+    forecast_minutes: 30   # T = 30 minutes output
+    stride_minutes: 10     # sliding window stride
+
+    # Coordinate system
+    projection: "utm"      # utm, enu, or mercator
+    use_relative_coords: true
+
+    # Neighbor selection
+    neighbor_radius_nmi: 2.0  # nautical miles
+    max_neighbors: 5          # K = 5 nearest neighbors
+
+    # Data splits
+    train_ratio: 0.7
+    val_ratio: 0.15
+    test_ratio: 0.15
+    split_by_mmsi: true  # ensure same ship doesn't appear in multiple splits
+
+  # Ship type filtering (optional)
+  ship_types:
+    include: [30, 31, 32, 33, 34, 35, 36, 37]  # cargo, tanker, passenger vessels
+    exclude: [30]  # fishing vessels (optional exclusion)
+
+# Paths
+paths:
+  raw_data: "data/raw"
+  interim_data: "data/interim"
+  processed_data: "data/processed"
+  meta_data: "data/meta"

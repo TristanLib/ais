@@ -1,0 +1,17 @@
+{
+  "primary": "temporal_primary_with_vessel_disjoint_secondary",
+  "temporal": {
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "test_ratio": 0.15
+  },
+  "vessel_disjoint": {
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "test_ratio": 0.15
+  },
+  "notes": [
+    "NPZ includes temporal_split and vessel_split arrays.",
+    "X_train/y_train etc. use the temporal split by default."
+  ]
+}

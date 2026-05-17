@@ -1,0 +1,5 @@
+model,group,ade_meters,fde_meters,rmse_meters,mae_meters,n_test,notes
+constant_velocity,all_samples,306.5470334627461,659.5750679121155,691.5849346411763,195.59882594651788,9262,"No vessel, timestamp, region, or ship-type metadata is present in the NPZ."
+linear_lstsq,all_samples,351.62295408203056,749.9748783407442,615.523911476211,223.2560040683574,9262,"No vessel, timestamp, region, or ship-type metadata is present in the NPZ."
+lstm_baseline,all_samples,69926.434155866,67654.13467973549,233702.26477598527,42058.4212331303,9262,"No vessel, timestamp, region, or ship-type metadata is present in the NPZ."
+transformer_baseline,all_samples,81626.71890193506,80757.47687569055,131464.729295995,48620.143788508605,9262,"No vessel, timestamp, region, or ship-type metadata is present in the NPZ."

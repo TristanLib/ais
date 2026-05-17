@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-05-16T12:51:20.476931+00:00",
+  "input_features": [
+    {
+      "index": 0,
+      "name": "x_or_lat",
+      "unit": "see_data_manifest"
+    },
+    {
+      "index": 1,
+      "name": "y_or_lon",
+      "unit": "see_data_manifest"
+    },
+    {
+      "index": 2,
+      "name": "sog",
+      "unit": "knots_or_normalized"
+    },
+    {
+      "index": 3,
+      "name": "cog_sin",
+      "unit": "unitless"
+    },
+    {
+      "index": 4,
+      "name": "cog_cos",
+      "unit": "unitless"
+    }
+  ],
+  "target": {
+    "dimensions": [
+      "x_or_lat",
+      "y_or_lon"
+    ],
+    "unit": "degrees_latlon_wgs84",
+    "metric_distance": "haversine_meters"
+  },
+  "notes": [
+    "The current NPZ does not contain MMSI or timestamp metadata.",
+    "Do not claim vessel-disjoint or temporal cross-validation from this NPZ alone."
+  ]
+}

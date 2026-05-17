@@ -1,0 +1,67 @@
+# Graph Neural Network (GNN) model configuration
+model:
+  name: "TrajGNN"
+
+  # Architecture
+  architecture:
+    d_input: 5          # lat, lon, sog, cog_sin, cog_cos
+    hidden_dim: 128     # GNN hidden dimension
+    gnn_layers: 3       # number of graph convolution layers
+    dropout: 0.1
+
+    # Graph construction parameters
+    max_distance: 5.0   # maximum distance for edge creation (nautical miles)
+    k_neighbors: 5      # maximum neighbors per ship
+
+    # Temporal encoding
+    use_temporal_encoding: true
+    temporal_dim: 32    # temporal embedding dimension
+
+    # Output
+    forecast_steps: 30   # T = 30 time steps
+    output_dim: 2        # lat, lon predictions
+
+  # Training
+  training:
+    batch_size: 32      # smaller batch for GNN due to memory
+    learning_rate: 5e-4
+    weight_decay: 1e-4
+    max_epochs: 120
+    early_stopping_patience: 12
+
+    # Optimizer
+    optimizer: "adamw"
+    scheduler: "cosine"
+    warmup_epochs: 10
+
+    # Loss function
+    loss_type: "smooth_l1"
+    step_weights: "linear"
+
+    # GNN-specific regularization
+    smoothness_weight: 0.01
+
+  # Mixed precision training
+  use_amp: true
+
+  # Checkpointing
+  save_top_k: 3
+  monitor_metric: "val_ade"
+  monitor_mode: "min"
+
+# Data augmentation (adjusted for graph-based model)
+augmentation:
+  enabled: true
+  noise_std: 0.0005    # smaller noise for graph stability
+  time_shift_max: 3    # smaller time shift
+  dropout_rate: 0.02   # conservative dropout for graphs
+
+# Graph-specific settings
+graph:
+  # Multi-ship scenario support
+  max_ships_per_batch: 10
+  ship_interaction_threshold: 10.0  # nautical miles
+
+  # Graph sampling (for large scenarios)
+  use_graph_sampling: false
+  sample_ratio: 0.7

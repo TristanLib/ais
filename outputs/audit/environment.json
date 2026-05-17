@@ -1,0 +1,66 @@
+{
+  "created_at": "2026-05-16T12:51:20.149145+00:00",
+  "python": {
+    "executable": "/Users/yuebao/research/ship-prediction-avoidance/.venv/bin/python",
+    "version": "3.11.15 (main, Mar  3 2026, 00:52:57) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "version_info": [
+      3,
+      11,
+      15,
+      "final",
+      0
+    ],
+    "platform": "macOS-26.4.1-arm64-arm-64bit"
+  },
+  "git": {
+    "commit": "6e652cc4b089894e6cbbe5562e8a0bc1e3aef93f",
+    "branch": "main",
+    "status_short": "M ../.DS_Store\n M .gitignore\n M README.md\n?? ../AGENTS.md\n?? AGENTS.md\n?? PUBLICATION_CURRENT_STATUS.md\n?? PUBLICATION_IMPLEMENTATION_PLAN.md\n?? configs/experiment_conservative.yaml\n?? outputs/audit/\n?? outputs/final/\n?? paper/\n?? requirements.txt\n?? scripts/audit_dataset.py\n?? scripts/audit_publication_pack.py\n?? scripts/check_env.py\n?? scripts/check_metric_stability.py\n?? scripts/final_stats.py\n?? scripts/final_train_eval.py\n?? scripts/make_figures.py\n?? scripts/make_manuscript.py\n?? scripts/make_paper_assets.py\n?? scripts/run_final_experiment.sh"
+  },
+  "modules": [
+    {
+      "module": "numpy",
+      "available": true,
+      "version": "2.4.5",
+      "error": null
+    },
+    {
+      "module": "scipy",
+      "available": true,
+      "version": "1.17.1",
+      "error": null
+    },
+    {
+      "module": "pandas",
+      "available": true,
+      "version": "3.0.3",
+      "error": null
+    },
+    {
+      "module": "sklearn",
+      "available": true,
+      "version": "1.8.0",
+      "error": null
+    },
+    {
+      "module": "matplotlib",
+      "available": true,
+      "version": "3.10.9",
+      "error": null
+    },
+    {
+      "module": "yaml",
+      "available": true,
+      "version": "6.0.3",
+      "error": null
+    },
+    {
+      "module": "torch",
+      "available": true,
+      "version": "2.12.0",
+      "error": null
+    }
+  ],
+  "missing_required_modules": [],
+  "ok": true
+}

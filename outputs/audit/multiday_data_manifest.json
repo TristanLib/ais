@@ -1,0 +1,263 @@
+{
+  "created_at": "2026-05-16T14:15:06.546562+00:00",
+  "config_path": "configs/experiment_multiday.yaml",
+  "command_options": {
+    "download": false,
+    "dates": null,
+    "max_rows_per_file": null,
+    "sample_rows_per_file": null,
+    "sample_time_blocks": [
+      [
+        0,
+        60
+      ],
+      [
+        720,
+        780
+      ]
+    ],
+    "sampling_strategy": "stratified_time_blocks",
+    "chunksize": 250000,
+    "skip_raw_checksums": true
+  },
+  "processed_npz": "data/processed/multiday_high_quality_processed.npz",
+  "processed_npz_exists": true,
+  "processed_npz_sha256": "c4cfbe2c672950e1abf739627014cc0d8ce834da6c50fe013680b78962ff63e6",
+  "raw_files": [
+    {
+      "path": "data/raw/real_ais_noaa_2024.csv",
+      "exists": true,
+      "size_bytes": 808247982,
+      "sha256": "c7ed5be12c89720652b029782a65d0641fc64de58e556b3150c70e3512b84bae",
+      "checksum_status": "computed_after_build",
+      "profiled_rows": 7295616,
+      "rows_selected_for_processing": 7295616,
+      "valid_rows_before_sampling": 7277188,
+      "kept_rows": 605500,
+      "unique_mmsi_count": 12520,
+      "valid_timestamp_min": "2024-01-02T00:00:00",
+      "valid_timestamp_max": "2024-01-02T23:59:59",
+      "timestamp_min": "2024-01-02T00:00:00",
+      "timestamp_max": "2024-01-02T12:59:59",
+      "lat_min": 0.1,
+      "lat_max": 49.82427,
+      "lon_min": -161.14785,
+      "lon_max": 145.56344,
+      "date_from_filename": null,
+      "sampling": {
+        "strategy": "stratified_time_blocks",
+        "sample_rows_per_file": null,
+        "sample_time_blocks": [
+          [
+            0,
+            60
+          ],
+          [
+            720,
+            780
+          ]
+        ],
+        "max_rows_per_file": null,
+        "profile_scope": "selected_rows"
+      }
+    },
+    {
+      "path": "data/raw/AIS_2024_01_09.csv",
+      "exists": true,
+      "size_bytes": 780612967,
+      "sha256": "2e142f7e379bc4deca11e5bc8ec42509013fdf1510af35261c2045fbda756344",
+      "checksum_status": "computed_after_build",
+      "profiled_rows": 7040401,
+      "rows_selected_for_processing": 7040401,
+      "valid_rows_before_sampling": 7023543,
+      "kept_rows": 598832,
+      "unique_mmsi_count": 12304,
+      "valid_timestamp_min": "2024-01-09T00:00:00",
+      "valid_timestamp_max": "2024-01-09T23:59:59",
+      "timestamp_min": "2024-01-09T00:00:00",
+      "timestamp_max": "2024-01-09T12:59:59",
+      "lat_min": 13.4205,
+      "lat_max": 49.83223,
+      "lon_min": -160.56538,
+      "lon_max": 144.8366,
+      "date_from_filename": "2024-01-09",
+      "sampling": {
+        "strategy": "stratified_time_blocks",
+        "sample_rows_per_file": null,
+        "sample_time_blocks": [
+          [
+            0,
+            60
+          ],
+          [
+            720,
+            780
+          ]
+        ],
+        "max_rows_per_file": null,
+        "profile_scope": "selected_rows"
+      }
+    },
+    {
+      "path": "data/raw/AIS_2024_02_06.csv",
+      "exists": true,
+      "size_bytes": 880883064,
+      "sha256": "7457d4275b7965c3afbc6d4669f0d1a64fdabb6144aaf8d2157e9d393a76661f",
+      "checksum_status": "computed_after_build",
+      "profiled_rows": 7948168,
+      "rows_selected_for_processing": 7948168,
+      "valid_rows_before_sampling": 7929246,
+      "kept_rows": 673771,
+      "unique_mmsi_count": 13382,
+      "valid_timestamp_min": "2024-02-06T00:00:00",
+      "valid_timestamp_max": "2024-02-06T23:59:59",
+      "timestamp_min": "2024-02-06T00:00:00",
+      "timestamp_max": "2024-02-06T12:59:59",
+      "lat_min": 2.30698,
+      "lat_max": 49.96806,
+      "lon_min": -159.66037,
+      "lon_max": 144.83661,
+      "date_from_filename": "2024-02-06",
+      "sampling": {
+        "strategy": "stratified_time_blocks",
+        "sample_rows_per_file": null,
+        "sample_time_blocks": [
+          [
+            0,
+            60
+          ],
+          [
+            720,
+            780
+          ]
+        ],
+        "max_rows_per_file": null,
+        "profile_scope": "selected_rows"
+      }
+    },
+    {
+      "path": "data/raw/AIS_2024_03_05.csv",
+      "exists": true,
+      "size_bytes": 837214781,
+      "sha256": "270440da298d94b50100389de0b0e419c81027cb356c6a1c1c9e9e162b0bf152",
+      "checksum_status": "computed_after_build",
+      "profiled_rows": 7560749,
+      "rows_selected_for_processing": 7560749,
+      "valid_rows_before_sampling": 7540599,
+      "kept_rows": 625013,
+      "unique_mmsi_count": 12817,
+      "valid_timestamp_min": "2024-03-05T00:00:00",
+      "valid_timestamp_max": "2024-03-05T23:59:59",
+      "timestamp_min": "2024-03-05T00:00:00",
+      "timestamp_max": "2024-03-05T12:59:59",
+      "lat_min": 0.07167,
+      "lat_max": 49.94926,
+      "lon_min": -159.35501,
+      "lon_max": 145.5274,
+      "date_from_filename": "2024-03-05",
+      "sampling": {
+        "strategy": "stratified_time_blocks",
+        "sample_rows_per_file": null,
+        "sample_time_blocks": [
+          [
+            0,
+            60
+          ],
+          [
+            720,
+            780
+          ]
+        ],
+        "max_rows_per_file": null,
+        "profile_scope": "selected_rows"
+      }
+    }
+  ],
+  "dataset_summary": {
+    "sample_count": 186326,
+    "unique_mmsi_count": 7425,
+    "source_dates": [
+      "2024-01-02",
+      "2024-01-09",
+      "2024-02-06",
+      "2024-03-05"
+    ],
+    "regions": [
+      "east_gulf_coast",
+      "hawaii_pacific",
+      "other",
+      "west_coast"
+    ],
+    "time_range": {
+      "start": "2024-01-02T00:00:00",
+      "end": "2024-03-05T12:59:00"
+    },
+    "temporal_split_counts": {
+      "train": 130428,
+      "val": 27948,
+      "test": 27950
+    },
+    "vessel_split_counts": {
+      "train": 130018,
+      "val": 28597,
+      "test": 27711
+    },
+    "avg_sog_knots": {
+      "mean": 2.2208217505426653,
+      "min": 0.0,
+      "max": 34.87833333333333
+    },
+    "turn_intensity_deg": {
+      "mean": 17.69325204320968,
+      "max": 148.75862068965517
+    },
+    "interpolation_ratio": {
+      "mean": 0.18062058494848338,
+      "max": 0.24444444444444444
+    }
+  },
+  "split_policy": {
+    "primary": "temporal_primary_with_vessel_disjoint_secondary",
+    "temporal": {
+      "train_ratio": 0.7,
+      "val_ratio": 0.15,
+      "test_ratio": 0.15
+    },
+    "vessel_disjoint": {
+      "train_ratio": 0.7,
+      "val_ratio": 0.15,
+      "test_ratio": 0.15
+    },
+    "notes": [
+      "NPZ includes temporal_split and vessel_split arrays.",
+      "X_train/y_train etc. use the temporal split by default."
+    ]
+  },
+  "scenario_slices": {
+    "speed_bins_knots": [
+      0,
+      2,
+      8,
+      15,
+      50
+    ],
+    "turn_rate_bins_degrees": [
+      0,
+      5,
+      15,
+      45,
+      180
+    ]
+  },
+  "warnings": [],
+  "raw_checksums_updated_at": "2026-05-16T14:15:54.790151+00:00",
+  "raw_checksums_update_status": {
+    "updated": [
+      "data/raw/real_ais_noaa_2024.csv",
+      "data/raw/AIS_2024_01_09.csv",
+      "data/raw/AIS_2024_02_06.csv",
+      "data/raw/AIS_2024_03_05.csv"
+    ],
+    "missing": []
+  }
+}

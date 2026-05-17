@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-05-16T12:54:50.074154+00:00",
+  "figures": [
+    {
+      "path": "outputs/final/figures/model_ade_bar.png",
+      "type": "bar_chart",
+      "models": [
+        "constant_velocity",
+        "linear_lstsq",
+        "lstm_baseline",
+        "transformer_baseline"
+      ]
+    },
+    {
+      "path": "outputs/final/figures/error_distributions.png",
+      "type": "histogram",
+      "models": [
+        "constant_velocity",
+        "linear_lstsq",
+        "lstm_baseline",
+        "transformer_baseline"
+      ],
+      "x_axis_cap_meters": 200000
+    }
+  ],
+  "notes": [
+    "Figures are generated from final CSV artifacts.",
+    "The standard-library renderer is intended for reproducibility; visual styling can be upgraded without changing source data."
+  ]
+}

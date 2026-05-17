@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-05-16T14:56:32.235327+00:00",
+  "manuscript": "paper/submission_manuscript_zh.md",
+  "source_artifacts": {
+    "data_manifest": "outputs/audit/multiday_data_manifest.json",
+    "model_metrics": "outputs/final_multiday/model_metrics.csv",
+    "risk_metrics": "outputs/final_risk/risk_metrics.json",
+    "readiness_report": "outputs/final_submission/readiness_report.json"
+  },
+  "readiness_status_at_generation": "submission_ready_candidate",
+  "blocking_gaps_at_generation": [],
+  "scope_note": "中文稿为国内期刊投稿候选稿，仍需按目标期刊模板进行人工排版和GB/T 7714参考文献整理。"
+}

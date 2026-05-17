@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-05-16T13:24:25.332886+00:00",
+  "config": "configs/experiment_multiday.yaml",
+  "input": "data/raw/real_ais_noaa_2024.csv",
+  "raw_files": [
+    {
+      "path": "data/raw/real_ais_noaa_2024.csv",
+      "exists": true,
+      "size_bytes": 808247982,
+      "sha256": "c7ed5be12c89720652b029782a65d0641fc64de58e556b3150c70e3512b84bae",
+      "profiled_rows": 1000000,
+      "kept_rows": 997233,
+      "unique_mmsi_count": 11826,
+      "timestamp_min": "2024-01-02T00:00:00",
+      "timestamp_max": "2024-01-02T03:54:09",
+      "lat_min": 0.11667,
+      "lat_max": 50.11028,
+      "lon_min": -158.92681,
+      "lon_max": -62.85897,
+      "date_from_filename": null
+    }
+  ],
+  "sample_count": 50,
+  "models_requested": [
+    "constant_velocity",
+    "kalman_filter_cv",
+    "linear_lstsq"
+  ],
+  "models_written": [
+    "constant_velocity",
+    "kalman_filter_cv",
+    "linear_lstsq"
+  ],
+  "skipped_models": {},
+  "warning_count": 0,
+  "outputs": {
+    "trajectory_predictions": "outputs/latest_predictions/trajectory_predictions.csv",
+    "risk_warnings": "outputs/latest_predictions/risk_warnings.csv",
+    "prediction_manifest": "outputs/latest_predictions/prediction_manifest.json"
+  },
+  "notes": [
+    "This is an offline prediction export for recently supplied AIS files, not a live AIS stream.",
+    "Risk warnings are based on predicted pairwise separation within the forecast horizon."
+  ]
+}

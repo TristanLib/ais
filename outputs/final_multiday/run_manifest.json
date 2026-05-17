@@ -1,0 +1,330 @@
+{
+  "created_at": "2026-05-16T14:40:34.772729+00:00",
+  "config": {
+    "experiment": {
+      "name": "high_quality_multiday_v1",
+      "description": "High-quality-journal dataset and benchmark protocol with retained metadata for temporal, vessel-disjoint, and scenario-slice evaluation.",
+      "seed": 42,
+      "dt_minutes": 1,
+      "history_steps": 30,
+      "forecast_steps": 15,
+      "stride_steps": 5,
+      "output_dir": "outputs/final_multiday",
+      "audit_dir": "outputs/audit"
+    },
+    "data": {
+      "source": "NOAA MarineCadastre AIS daily CSV/ZIP",
+      "download_url_template": "https://coast.noaa.gov/htdata/CMSP/AISDataHandler/{year}/AIS_{year}_{month:02d}_{day:02d}.zip",
+      "raw_files": [
+        "data/raw/real_ais_noaa_2024.csv",
+        "data/raw/AIS_2024_01_09.csv",
+        "data/raw/AIS_2024_02_06.csv",
+        "data/raw/AIS_2024_03_05.csv"
+      ],
+      "planned_dates": [
+        "2024-01-02",
+        "2024-01-09",
+        "2024-02-06",
+        "2024-03-05"
+      ],
+      "processed_npz": "data/processed/multiday_high_quality_processed.npz",
+      "split_protocol": "temporal_primary_with_vessel_disjoint_secondary",
+      "coordinate_units": "degrees_latlon_wgs84",
+      "metric_distance": "haversine_meters",
+      "target_extension_allowed_for_main_results": false,
+      "column_mapping": {
+        "BaseDateTime": "timestamp",
+        "MMSI": "mmsi",
+        "LAT": "lat",
+        "LON": "lon",
+        "SOG": "sog",
+        "COG": "cog",
+        "Heading": "heading",
+        "VesselType": "ship_type",
+        "Status": "nav_status",
+        "Length": "length",
+        "Width": "width"
+      },
+      "filters": {
+        "mmsi_range": [
+          100000000,
+          999999999
+        ],
+        "lat_range": [
+          -90,
+          90
+        ],
+        "lon_range": [
+          -180,
+          180
+        ],
+        "sog_range": [
+          0,
+          50
+        ],
+        "cog_range": [
+          0,
+          360
+        ],
+        "max_interpolation_gap_minutes": 3,
+        "max_window_interpolation_ratio": 0.25,
+        "min_raw_points_per_track": 12,
+        "min_observation_density_per_minute": 0.05
+      },
+      "regions": [
+        {
+          "name": "hawaii_pacific",
+          "lat_range": [
+            13,
+            25
+          ],
+          "lon_range": [
+            -165,
+            -145
+          ]
+        },
+        {
+          "name": "west_coast",
+          "lat_range": [
+            30,
+            50
+          ],
+          "lon_range": [
+            -130,
+            -115
+          ]
+        },
+        {
+          "name": "east_gulf_coast",
+          "lat_range": [
+            24,
+            46
+          ],
+          "lon_range": [
+            -100,
+            -65
+          ]
+        }
+      ]
+    },
+    "splits": {
+      "temporal": {
+        "train_ratio": 0.7,
+        "val_ratio": 0.15,
+        "test_ratio": 0.15
+      },
+      "vessel_disjoint": {
+        "train_ratio": 0.7,
+        "val_ratio": 0.15,
+        "test_ratio": 0.15
+      }
+    },
+    "scenario_slices": {
+      "speed_bins_knots": [
+        0,
+        2,
+        8,
+        15,
+        50
+      ],
+      "turn_rate_bins_degrees": [
+        0,
+        5,
+        15,
+        45,
+        180
+      ]
+    },
+    "risk_warning": {
+      "output_dir": "outputs/final_risk",
+      "split_policy": "temporal_test",
+      "search_radius_nmi": 3.0,
+      "warning_threshold_nmi": 0.5,
+      "forecast_step_minutes": 1,
+      "max_eval_samples": 5000,
+      "max_scenarios": 2000,
+      "models": [
+        "constant_velocity",
+        "kalman_filter_cv",
+        "linear_lstsq"
+      ]
+    },
+    "models": {
+      "final_main": [
+        "constant_velocity",
+        "constant_acceleration",
+        "kalman_filter_cv",
+        "ridge_lstsq",
+        "linear_lstsq",
+        "lstm_baseline",
+        "gru_baseline",
+        "transformer_baseline",
+        "tcn_baseline"
+      ],
+      "neural_training": {
+        "epochs": 12,
+        "batch_size": 256,
+        "learning_rate": 0.001,
+        "early_stopping_patience": 3,
+        "device": "auto"
+      },
+      "neural_tuning": {
+        "protocol": "validation_set_proxy_search_then_full_split_training",
+        "selection_metric": "validation_ade_meters",
+        "proxy_train_samples": 8192,
+        "proxy_val_samples": 2048,
+        "search_space": {
+          "lstm_baseline": {
+            "hidden_size": [
+              64,
+              128
+            ],
+            "n_layers": [
+              1,
+              2
+            ],
+            "dropout": [
+              0.0,
+              0.1
+            ],
+            "learning_rate": [
+              0.001
+            ],
+            "batch_size": [
+              256
+            ],
+            "epochs": [
+              8
+            ],
+            "early_stopping_patience": [
+              2
+            ]
+          },
+          "gru_baseline": {
+            "hidden_size": [
+              64,
+              128
+            ],
+            "n_layers": [
+              1,
+              2
+            ],
+            "dropout": [
+              0.0,
+              0.1
+            ],
+            "learning_rate": [
+              0.001
+            ],
+            "batch_size": [
+              256
+            ],
+            "epochs": [
+              8
+            ],
+            "early_stopping_patience": [
+              2
+            ]
+          },
+          "transformer_baseline": {
+            "d_model": [
+              64,
+              96
+            ],
+            "n_heads": [
+              4
+            ],
+            "n_layers": [
+              1,
+              2
+            ],
+            "d_ff": [
+              128,
+              192
+            ],
+            "dropout": [
+              0.0,
+              0.1
+            ],
+            "learning_rate": [
+              0.001
+            ],
+            "batch_size": [
+              256
+            ],
+            "epochs": [
+              8
+            ],
+            "early_stopping_patience": [
+              2
+            ]
+          },
+          "tcn_baseline": {
+            "channels": [
+              [
+                48,
+                64
+              ],
+              [
+                64,
+                96,
+                128
+              ]
+            ],
+            "kernel_size": [
+              3
+            ],
+            "dropout": [
+              0.0,
+              0.1
+            ],
+            "learning_rate": [
+              0.001
+            ],
+            "batch_size": [
+              256
+            ],
+            "epochs": [
+              8
+            ],
+            "early_stopping_patience": [
+              2
+            ]
+          }
+        }
+      }
+    }
+  },
+  "models": [
+    "constant_acceleration",
+    "constant_velocity",
+    "gru_baseline",
+    "kalman_filter_cv",
+    "linear_lstsq",
+    "lstm_baseline",
+    "ridge_lstsq",
+    "tcn_baseline",
+    "transformer_baseline"
+  ],
+  "split_policies": [
+    "temporal_test",
+    "vessel_disjoint_test"
+  ],
+  "max_train_samples": null,
+  "max_test_samples": null,
+  "is_debug_run": false,
+  "merge_existing": true,
+  "outputs": {
+    "model_metrics": "outputs/final_multiday/model_metrics.csv",
+    "generalization_metrics": "outputs/final_multiday/generalization_metrics.csv",
+    "per_sample_errors": "outputs/final_multiday/per_sample_errors.csv",
+    "error_summary_by_horizon": "outputs/final_multiday/error_summary_by_horizon.csv",
+    "error_summary_by_group": "outputs/final_multiday/error_summary_by_group.csv",
+    "statistical_tests": "outputs/final_multiday/statistical_tests.json"
+  },
+  "unit_status": {
+    "coordinate_units": "degrees_latlon_wgs84",
+    "metric_distance": "haversine_meters",
+    "unit_verified": true
+  }
+}

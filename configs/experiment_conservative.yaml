@@ -1,0 +1,91 @@
+{
+  "experiment": {
+    "name": "conservative_publication_v1",
+    "description": "Auditable conservative experiment for publication: real AIS short-term trajectory prediction baselines with explicit unsupported-claim boundaries.",
+    "seed": 42,
+    "dt_minutes": 1,
+    "history_steps": 30,
+    "forecast_steps": 15,
+    "output_dir": "outputs/final",
+    "audit_dir": "outputs/audit"
+  },
+  "data": {
+    "processed_npz": "data/processed/real_noaa_processed.npz",
+    "raw_files": [
+      "data/raw/real_ais_noaa_2024.csv"
+    ],
+    "array_keys": {
+      "X_train": "X_train",
+      "y_train": "y_train",
+      "X_val": "X_val",
+      "y_val": "y_val",
+      "X_test": "X_test",
+      "y_test": "y_test"
+    },
+    "split_protocol": "precomputed_npz_splits",
+    "coordinate_units": "degrees_latlon_wgs84",
+    "metric_distance": "haversine_meters",
+    "horizon_description": "30 one-minute input steps -> 15 one-minute forecast steps",
+    "target_extension_allowed_for_main_results": false
+  },
+  "models": {
+    "final_main": [
+      "constant_velocity",
+      "linear_lstsq",
+      "lstm_baseline",
+      "transformer_baseline"
+    ],
+    "training": {
+      "lstm_baseline": {
+        "epochs": 8,
+        "batch_size": 256,
+        "learning_rate": 0.001,
+        "hidden_size": 128,
+        "n_layers": 2,
+        "dropout": 0.1,
+        "loss": "mse",
+        "device": "auto"
+      },
+      "transformer_baseline": {
+        "epochs": 8,
+        "batch_size": 128,
+        "learning_rate": 0.0005,
+        "d_model": 96,
+        "n_heads": 4,
+        "n_layers": 2,
+        "d_ff": 192,
+        "dropout": 0.1,
+        "loss": "mse",
+        "device": "auto"
+      }
+    },
+    "exploratory_only": [
+      "gnn",
+      "stt",
+      "pinn",
+      "proper_lstm_recovery",
+      "proper_transformer_recovery"
+    ]
+  },
+  "evaluation": {
+    "metrics": [
+      "ade_meters",
+      "fde_meters",
+      "rmse_meters",
+      "mae_meters"
+    ],
+    "confidence_level": 0.95,
+    "paired_test_reference": "constant_velocity",
+    "multiple_testing_correction": "bonferroni"
+  },
+  "claim_policy": {
+    "exclude_from_main_paper_until_regenerated": [
+      "proper_lstm_9_4m_ade",
+      "training_methodology_23000x_improvement",
+      "gnn_stt_pinn_full_data_success",
+      "five_fold_temporal_cross_validation",
+      "regional_generalization",
+      "collision_avoidance_success"
+    ]
+  }
+}

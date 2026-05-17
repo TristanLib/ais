@@ -1,0 +1,1 @@
+model,sample_id_a,sample_id_b,mmsi_a,mmsi_b,origin_time,region_a,region_b,origin_distance_nmi,pred_min_cpa_nmi,pred_tcpa_minutes,warning_threshold_nmi

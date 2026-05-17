@@ -1,0 +1,230 @@
+{
+  "created_at": "2026-05-16T12:51:20.476931+00:00",
+  "config_path": "configs/experiment_conservative.yaml",
+  "experiment": {
+    "name": "conservative_publication_v1",
+    "description": "Auditable conservative experiment for publication: real AIS short-term trajectory prediction baselines with explicit unsupported-claim boundaries.",
+    "seed": 42,
+    "dt_minutes": 1,
+    "history_steps": 30,
+    "forecast_steps": 15,
+    "output_dir": "outputs/final",
+    "audit_dir": "outputs/audit"
+  },
+  "data_policy": {
+    "split_protocol": "precomputed_npz_splits",
+    "coordinate_units": "degrees_latlon_wgs84",
+    "metric_distance": "haversine_meters",
+    "horizon_description": "30 one-minute input steps -> 15 one-minute forecast steps",
+    "target_extension_allowed_for_main_results": false,
+    "inferred_position_units": {
+      "inferred": "degrees_latlon_wgs84",
+      "lat_min": 13.44598,
+      "lat_max": 49.5211,
+      "lon_min": -158.11991,
+      "lon_max": 144.63076,
+      "finite_ratio": 1.0
+    }
+  },
+  "files": {
+    "processed_npz": {
+      "path": "data/processed/real_noaa_processed.npz",
+      "exists": true,
+      "size_bytes": 88904206,
+      "sha256": "21c7328861915196c551e85b4b2c9e9ba34441fce41bca7f0b1e3c85e196f8f8"
+    },
+    "raw_files": [
+      {
+        "path": "data/raw/real_ais_noaa_2024.csv",
+        "exists": true,
+        "size_bytes": 808247982,
+        "sha256": "c7ed5be12c89720652b029782a65d0641fc64de58e556b3150c70e3512b84bae",
+        "profile": {
+          "profiled": true,
+          "record_count": 7295616,
+          "unique_mmsi_count": 15130,
+          "timestamp_min": "2024-01-02T00:00:00",
+          "timestamp_max": "2024-01-02T23:59:59",
+          "columns": [
+            "MMSI",
+            "BaseDateTime",
+            "LAT",
+            "LON",
+            "SOG",
+            "COG",
+            "Heading",
+            "VesselName",
+            "IMO",
+            "CallSign",
+            "VesselType",
+            "Status",
+            "Length",
+            "Width",
+            "Draft",
+            "Cargo",
+            "TransceiverClass"
+          ]
+        }
+      }
+    ]
+  },
+  "arrays": {
+    "X_train": {
+      "name": "X_train",
+      "shape": [
+        43216,
+        30,
+        5
+      ],
+      "dtype": "float64",
+      "numeric": true,
+      "min": -158.11991,
+      "max": 144.63076,
+      "mean": -11.717942960147349,
+      "finite_ratio": 1.0,
+      "col_min": [
+        13.44598,
+        -158.11991,
+        0.0,
+        -1.0,
+        -1.0
+      ],
+      "col_max": [
+        49.5211,
+        144.63076,
+        37.3,
+        1.0,
+        1.0
+      ]
+    },
+    "y_train": {
+      "name": "y_train",
+      "shape": [
+        43216,
+        15,
+        2
+      ],
+      "dtype": "float64",
+      "numeric": true,
+      "min": -158.11991,
+      "max": 144.63076,
+      "mean": -30.77510665540541,
+      "finite_ratio": 1.0,
+      "col_min": [
+        13.44598,
+        -158.11991
+      ],
+      "col_max": [
+        49.5211,
+        144.63076
+      ]
+    },
+    "X_val": {
+      "name": "X_val",
+      "shape": [
+        9260,
+        30,
+        5
+      ],
+      "dtype": "float64",
+      "numeric": true,
+      "min": -158.11991,
+      "max": 144.63076,
+      "mean": -11.656880010416193,
+      "finite_ratio": 1.0,
+      "col_min": [
+        13.44598,
+        -158.11991,
+        0.0,
+        -1.0,
+        -1.0
+      ],
+      "col_max": [
+        49.5211,
+        144.63076,
+        37.3,
+        1.0,
+        1.0
+      ]
+    },
+    "y_val": {
+      "name": "y_val",
+      "shape": [
+        9260,
+        15,
+        2
+      ],
+      "dtype": "float64",
+      "numeric": true,
+      "min": -158.11991,
+      "max": 144.63076,
+      "mean": -30.667309461771058,
+      "finite_ratio": 1.0,
+      "col_min": [
+        13.44598,
+        -158.11991
+      ],
+      "col_max": [
+        49.5211,
+        144.63076
+      ]
+    },
+    "X_test": {
+      "name": "X_test",
+      "shape": [
+        9262,
+        30,
+        5
+      ],
+      "dtype": "float64",
+      "numeric": true,
+      "min": -158.11991,
+      "max": 144.63076,
+      "mean": -11.653564506114746,
+      "finite_ratio": 1.0,
+      "col_min": [
+        13.44598,
+        -158.11991,
+        0.0,
+        -1.0,
+        -1.0
+      ],
+      "col_max": [
+        49.5211,
+        144.63076,
+        37.3,
+        1.0,
+        1.0
+      ]
+    },
+    "y_test": {
+      "name": "y_test",
+      "shape": [
+        9262,
+        15,
+        2
+      ],
+      "dtype": "float64",
+      "numeric": true,
+      "min": -158.11991,
+      "max": 144.63076,
+      "mean": -30.64101984618153,
+      "finite_ratio": 1.0,
+      "col_min": [
+        13.44598,
+        -158.11991
+      ],
+      "col_max": [
+        49.5211,
+        144.63076
+      ]
+    }
+  },
+  "split_counts": {
+    "train": 43216,
+    "val": 9260,
+    "test": 9262
+  },
+  "warnings": [],
+  "split_manifest": "outputs/audit/split_manifest.csv"
+}

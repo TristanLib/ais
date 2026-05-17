@@ -1,0 +1,80 @@
+{
+  "created_at": "2026-05-16T14:31:11.827251+00:00",
+  "split_policy": "temporal_test",
+  "models": [
+    "constant_velocity",
+    "kalman_filter_cv",
+    "linear_lstsq"
+  ],
+  "scenario_generation": {
+    "max_eval_samples": 5000,
+    "evaluated_samples": 5000,
+    "scenario_count": 2000,
+    "search_radius_nmi": 3.0,
+    "warning_threshold_nmi": 0.5,
+    "truth_warning_count": 520
+  },
+  "model_runtime": {
+    "constant_velocity": {
+      "train_seconds": 0.0,
+      "inference_seconds": 0.0007040500640869141
+    },
+    "kalman_filter_cv": {
+      "train_seconds": 0.0,
+      "inference_seconds": 0.006901979446411133
+    },
+    "linear_lstsq": {
+      "train_seconds": 0.5743680000305176,
+      "inference_seconds": 0.0024261474609375
+    }
+  },
+  "metrics_by_model": {
+    "constant_velocity": {
+      "n_scenarios": 2000,
+      "true_positive": 465,
+      "false_positive": 19,
+      "false_negative": 55,
+      "true_negative": 1461,
+      "precision": 0.9607438016528925,
+      "recall": 0.8942307692307693,
+      "false_alarm_rate": 0.012837837837837839,
+      "missed_warning_rate": 0.10576923076923077,
+      "mean_abs_lead_time_error_minutes": 0.04516129032258064,
+      "mean_abs_cpa_error_nmi": 0.0820730651761716
+    },
+    "kalman_filter_cv": {
+      "n_scenarios": 2000,
+      "true_positive": 468,
+      "false_positive": 18,
+      "false_negative": 52,
+      "true_negative": 1462,
+      "precision": 0.9629629629629629,
+      "recall": 0.9,
+      "false_alarm_rate": 0.012162162162162163,
+      "missed_warning_rate": 0.1,
+      "mean_abs_lead_time_error_minutes": 0.08333333333333333,
+      "mean_abs_cpa_error_nmi": 0.09214579688015712
+    },
+    "linear_lstsq": {
+      "n_scenarios": 2000,
+      "true_positive": 453,
+      "false_positive": 173,
+      "false_negative": 67,
+      "true_negative": 1307,
+      "precision": 0.7236421725239617,
+      "recall": 0.8711538461538462,
+      "false_alarm_rate": 0.11689189189189189,
+      "missed_warning_rate": 0.12884615384615383,
+      "mean_abs_lead_time_error_minutes": 0.30242825607064017,
+      "mean_abs_cpa_error_nmi": 0.34571128588925215
+    }
+  },
+  "notes": [
+    "Risk labels are AIS-derived from observed future trajectory separation over the forecast horizon.",
+    "This is a risk-warning decision-support evaluation, not a validated autonomous collision-avoidance simulation."
+  ],
+  "outputs": {
+    "risk_scenarios": "outputs/final_risk/risk_scenarios.csv",
+    "risk_case_studies": "outputs/final_risk/figures/risk_case_studies.png"
+  }
+}

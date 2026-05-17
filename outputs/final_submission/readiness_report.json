@@ -1,0 +1,347 @@
+{
+  "created_at": "2026-05-17T03:13:44.784395+00:00",
+  "overall_status": "submission_ready_candidate",
+  "phases": [
+    {
+      "phase": "Phase A: data protocol",
+      "status": "partial",
+      "deliverables": [
+        {
+          "path": "configs/experiment_multiday.yaml",
+          "exists": true,
+          "size_bytes": 4766
+        },
+        {
+          "path": "scripts/build_multiday_dataset.py",
+          "exists": true,
+          "size_bytes": 28839
+        },
+        {
+          "path": "outputs/audit/multiday_data_manifest.json",
+          "exists": true,
+          "size_bytes": 7029
+        },
+        {
+          "path": "outputs/audit/split_policy.json",
+          "exists": true,
+          "size_bytes": 395
+        },
+        {
+          "path": "data/processed/multiday_high_quality_processed.npz",
+          "exists": false,
+          "size_bytes": 0
+        }
+      ],
+      "checks": [
+        {
+          "name": "metadata-rich sample count > 0",
+          "passed": true,
+          "value": 186326
+        },
+        {
+          "name": "temporal split exists",
+          "passed": true,
+          "value": {
+            "train": 130428,
+            "val": 27948,
+            "test": 27950
+          }
+        },
+        {
+          "name": "vessel-disjoint split exists",
+          "passed": true,
+          "value": {
+            "train": 130018,
+            "val": 28597,
+            "test": 27711
+          }
+        },
+        {
+          "name": "at least four source dates for high-quality target",
+          "passed": true,
+          "value": [
+            "2024-01-02",
+            "2024-01-09",
+            "2024-02-06",
+            "2024-03-05"
+          ]
+        },
+        {
+          "name": "dataset uses uncapped or documented systematic sampling protocol",
+          "passed": true,
+          "value": {
+            "max_rows_per_file": null,
+            "sample_rows_per_file": null,
+            "sample_time_blocks": [
+              [
+                0,
+                60
+              ],
+              [
+                720,
+                780
+              ]
+            ],
+            "sampling_strategy": "stratified_time_blocks"
+          }
+        },
+        {
+          "name": "raw checksums computed",
+          "passed": true,
+          "value": [
+            "computed_after_build",
+            "computed_after_build",
+            "computed_after_build",
+            "computed_after_build"
+          ]
+        }
+      ],
+      "missing": [
+        "data/processed/multiday_high_quality_processed.npz"
+      ],
+      "failed_checks": []
+    },
+    {
+      "phase": "Phase B: expanded benchmark",
+      "status": "partial",
+      "deliverables": [
+        {
+          "path": "scripts/final_train_eval_multiday.py",
+          "exists": true,
+          "size_bytes": 27285
+        },
+        {
+          "path": "src/models/gru.py",
+          "exists": true,
+          "size_bytes": 2727
+        },
+        {
+          "path": "src/models/tcn.py",
+          "exists": true,
+          "size_bytes": 4125
+        },
+        {
+          "path": "outputs/final_multiday/model_metrics.csv",
+          "exists": true,
+          "size_bytes": 3569
+        },
+        {
+          "path": "outputs/final_multiday/per_sample_errors.csv",
+          "exists": false,
+          "size_bytes": 0
+        },
+        {
+          "path": "outputs/final_multiday/neural_tuning_protocol.json",
+          "exists": true,
+          "size_bytes": 3819
+        },
+        {
+          "path": "outputs/final_multiday/neural_tuning_results.csv",
+          "exists": true,
+          "size_bytes": 3598
+        }
+      ],
+      "checks": [
+        {
+          "name": "all configured smoke-run models completed",
+          "passed": true,
+          "value": {
+            "temporal_test::constant_acceleration": "ok",
+            "temporal_test::constant_velocity": "ok",
+            "temporal_test::gru_baseline": "ok",
+            "temporal_test::kalman_filter_cv": "ok",
+            "temporal_test::linear_lstsq": "ok",
+            "temporal_test::lstm_baseline": "ok",
+            "temporal_test::ridge_lstsq": "ok",
+            "temporal_test::tcn_baseline": "ok",
+            "temporal_test::transformer_baseline": "ok",
+            "vessel_disjoint_test::constant_acceleration": "ok",
+            "vessel_disjoint_test::constant_velocity": "ok",
+            "vessel_disjoint_test::gru_baseline": "ok",
+            "vessel_disjoint_test::kalman_filter_cv": "ok",
+            "vessel_disjoint_test::linear_lstsq": "ok",
+            "vessel_disjoint_test::lstm_baseline": "ok",
+            "vessel_disjoint_test::ridge_lstsq": "ok",
+            "vessel_disjoint_test::tcn_baseline": "ok",
+            "vessel_disjoint_test::transformer_baseline": "ok"
+          }
+        },
+        {
+          "name": "all configured models present on both final split policies",
+          "passed": true,
+          "value": []
+        },
+        {
+          "name": "debug cap is not final paper run",
+          "passed": true,
+          "value": false
+        },
+        {
+          "name": "neural models have documented validation-set tuning protocol",
+          "passed": true,
+          "value": {
+            "protocol": "validation_set_proxy_search_then_full_split_training",
+            "selection_metric": "validation_ade_meters",
+            "missing_models": []
+          }
+        }
+      ],
+      "missing": [
+        "outputs/final_multiday/per_sample_errors.csv"
+      ],
+      "failed_checks": []
+    },
+    {
+      "phase": "Phase C: generalization and error analysis",
+      "status": "pass",
+      "deliverables": [
+        {
+          "path": "outputs/final_multiday/generalization_metrics.csv",
+          "exists": true,
+          "size_bytes": 3569
+        },
+        {
+          "path": "outputs/final_multiday/error_summary_by_horizon.csv",
+          "exists": true,
+          "size_bytes": 29642
+        },
+        {
+          "path": "outputs/final_multiday/error_summary_by_group.csv",
+          "exists": true,
+          "size_bytes": 28358
+        },
+        {
+          "path": "outputs/final_multiday/statistical_tests.json",
+          "exists": true,
+          "size_bytes": 13564
+        }
+      ],
+      "checks": [
+        {
+          "name": "temporal and vessel-disjoint metrics exist",
+          "passed": true,
+          "value": [
+            "temporal_test",
+            "vessel_disjoint_test"
+          ]
+        }
+      ],
+      "missing": [],
+      "failed_checks": []
+    },
+    {
+      "phase": "Phase D: risk-warning demonstration",
+      "status": "pass",
+      "deliverables": [
+        {
+          "path": "scripts/evaluate_risk_warning.py",
+          "exists": true,
+          "size_bytes": 16840
+        },
+        {
+          "path": "outputs/final_risk/risk_scenarios.csv",
+          "exists": true,
+          "size_bytes": 1235812
+        },
+        {
+          "path": "outputs/final_risk/risk_metrics.json",
+          "exists": true,
+          "size_bytes": 2530
+        },
+        {
+          "path": "outputs/final_risk/figures/risk_case_studies.png",
+          "exists": true,
+          "size_bytes": 82820
+        },
+        {
+          "path": "scripts/predict_latest_ais.py",
+          "exists": true,
+          "size_bytes": 12116
+        },
+        {
+          "path": "outputs/latest_predictions/prediction_manifest.json",
+          "exists": true,
+          "size_bytes": 1423
+        }
+      ],
+      "checks": [
+        {
+          "name": "AIS-derived risk scenarios exist",
+          "passed": true,
+          "value": {
+            "max_eval_samples": 5000,
+            "evaluated_samples": 5000,
+            "scenario_count": 2000,
+            "search_radius_nmi": 3.0,
+            "warning_threshold_nmi": 0.5,
+            "truth_warning_count": 520
+          }
+        },
+        {
+          "name": "latest/offline prediction export ran",
+          "passed": true,
+          "value": 50
+        }
+      ],
+      "missing": [],
+      "failed_checks": []
+    },
+    {
+      "phase": "Phase E: submission package",
+      "status": "pass",
+      "deliverables": [
+        {
+          "path": "paper/submission_manuscript.md",
+          "exists": true,
+          "size_bytes": 8485
+        },
+        {
+          "path": "paper/references.bib",
+          "exists": true,
+          "size_bytes": 3453
+        },
+        {
+          "path": "paper/tables/high_quality_model_metrics.md",
+          "exists": true,
+          "size_bytes": 2090
+        },
+        {
+          "path": "paper/tables/risk_warning_metrics.md",
+          "exists": true,
+          "size_bytes": 348
+        },
+        {
+          "path": "outputs/final_submission/submission_manifest.json",
+          "exists": true,
+          "size_bytes": 710
+        }
+      ],
+      "checks": [
+        {
+          "name": "venue-specific submission manuscript exists",
+          "passed": true,
+          "value": null
+        },
+        {
+          "name": "bibliography exists",
+          "passed": true,
+          "value": null
+        },
+        {
+          "name": "submission manifest points to current manuscript",
+          "passed": true,
+          "value": "paper/submission_manuscript.md"
+        },
+        {
+          "name": "submission pack generated from current debug/final state",
+          "passed": true,
+          "value": false
+        }
+      ],
+      "missing": [],
+      "failed_checks": []
+    }
+  ],
+  "blocking_gaps": [],
+  "current_claim_boundary": "The repository now supports an artifact-complete high-quality-journal candidate package when this report has no blocking gaps. This is not an acceptance guarantee: broader all-day traffic claims, architecture-superiority claims, or autonomous collision-avoidance claims still require additional evidence beyond the current artifacts."
+}

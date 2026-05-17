@@ -1,0 +1,123 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+ship_env/
+.env/
+
+# PyTorch / model checkpoints
+*.pth
+*.pt
+*.ckpt
+*.npz
+outputs/**/checkpoints/
+outputs/**/tuning/
+outputs/**/training_logs/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Data files (large datasets)
+data/raw/
+data/interim/
+data/processed/
+data/raw/*.csv
+data/raw/*.parquet
+data/raw/*.zip
+data/interim/*.csv
+data/interim/*.parquet
+data/processed/*.pkl
+data/processed/*.csv
+data/processed/*.parquet
+
+# Model outputs
+outputs/models/
+outputs/models/*.pth
+outputs/models/*.pt
+outputs/models/*.ckpt
+outputs/models/*.pkl
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Pipeline status files
+.pipeline_*
+=*
+
+# Large generated evidence files; keep summary tables/manifests instead.
+outputs/**/per_sample_errors.csv
+outputs/audit/*split_manifest.csv
+
+# Exclude specific large synthetic data
+data/raw/realistic_synthetic_ais.csv
+data/raw/comprehensive_realistic_ais.csv
+
+# But keep sample and config files
+!configs/
+!scripts/
+!src/
+!data/
+!data/README.md
+!data/meta/
+!data/meta/*.json
+
+# Keep important result files
+!outputs/models/*.json
+!outputs/figures/*.png

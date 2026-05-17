@@ -1,0 +1,25 @@
+{
+  "raw_records": 72000,
+  "clean_records": 72000,
+  "retention_rate": 1.0,
+  "unique_vessels": 50,
+  "time_range": {
+    "start": "2023-01-01 00:00:00",
+    "end": "2023-01-01 23:59:00",
+    "duration_hours": 23.983333333333334
+  },
+  "geographic_bounds": {
+    "lat_min": 33.078723393358345,
+    "lat_max": 49.971788599671555,
+    "lon_min": -86.57749059935986,
+    "lon_max": -62.62105041171612
+  },
+  "navigation_stats": {
+    "sog_mean": 15.463007600149641,
+    "sog_std": 8.18647246562293,
+    "sog_range": [
+      1.0,
+      30.0
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+# Simulation and collision avoidance configuration
+simulation:
+  # Scenario generation
+  scenarios:
+    n_monte_carlo: 100
+    scenario_types:
+      - "crossing"
+      - "head_on"
+      - "overtaking"
+      - "narrow_channel"
+      - "port_approach"
+
+    # Initial conditions
+    speed_range: [5, 25]      # knots
+    distance_range: [0.5, 5]  # nautical miles
+    bearing_range: [0, 360]   # degrees
+
+  # Risk assessment
+  risk:
+    safe_distance: 0.5        # nautical miles
+    time_horizon: 1800        # seconds (30 minutes)
+    update_interval: 30       # seconds
+
+  # Collision avoidance
+  avoidance:
+    # Action space
+    heading_changes: [-20, -10, 0, 10, 20]  # degrees
+    speed_changes: [-0.2, -0.1, 0, 0.1]     # relative change
+
+    # Constraints
+    max_heading_rate: 5       # degrees per minute
+    max_speed_change: 0.3     # relative
+    min_speed_ratio: 0.3      # minimum speed as ratio of original
+
+    # Cost function weights
+    weights:
+      safety: 10.0            # CPA improvement weight
+      deviation: 1.0          # course/speed deviation penalty
+      energy: 0.5             # energy consumption proxy
+      comfort: 0.3            # passenger comfort (acceleration)
+
+    # COLREGs compliance
+    colregs:
+      enable: true
+      give_way_bias: 1.5      # preference for give-way vessel actions
+      starboard_preference: 1.2  # starboard turn preference
+
+# Evaluation metrics
+evaluation:
+  # Trajectory prediction metrics
+  prediction:
+    metrics: ["ade", "fde", "rmse", "mae"]
+    horizons: [5, 10, 20, 30]  # minutes
+    confidence_intervals: [0.95]
+
+  # Collision avoidance metrics
+  avoidance:
+    collision_threshold: 0.1   # nautical miles
+    near_miss_threshold: 0.2   # nautical miles
+    success_criteria:
+      max_collision_rate: 0.02
+      min_avg_cpa: 0.2
+
+  # Statistical testing
+  statistical:
+    test_type: "paired_t"     # paired_t, bootstrap, wilcoxon
+    alpha: 0.05
+    bootstrap_samples: 1000
+
+# Visualization
+visualization:
+  # Plot settings
+  figure_size: [12, 8]
+  dpi: 300
+
+  # Map settings
+  map_style: "OpenStreetMap"
+  trajectory_colors:
+    actual: "blue"
+    predicted: "red"
+    neighbors: "gray"
+    risk_zone: "orange"
+
+  # Animation settings
+  animation:
+    fps: 2
+    duration: 60  # seconds
+    trail_length: 20  # time steps

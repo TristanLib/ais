@@ -1,0 +1,155 @@
+{
+  "created_at": "2026-05-16T12:54:49.203009+00:00",
+  "status": "pass",
+  "tolerance": 1e-09,
+  "comparisons": [
+    {
+      "model": "constant_velocity",
+      "status_first": "ok",
+      "status_second": "ok",
+      "status_match": true,
+      "metrics": [
+        {
+          "metric": "ade_meters",
+          "first": 306.5470334627461,
+          "second": 306.5470334627461,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "fde_meters",
+          "first": 659.5750679121155,
+          "second": 659.5750679121155,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "rmse_meters",
+          "first": 691.5849346411763,
+          "second": 691.5849346411763,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "mae_meters",
+          "first": 195.59882594651788,
+          "second": 195.59882594651788,
+          "relative_difference": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "model": "linear_lstsq",
+      "status_first": "ok",
+      "status_second": "ok",
+      "status_match": true,
+      "metrics": [
+        {
+          "metric": "ade_meters",
+          "first": 351.62295408203056,
+          "second": 351.62295408203056,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "fde_meters",
+          "first": 749.9748783407442,
+          "second": 749.9748783407442,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "rmse_meters",
+          "first": 615.523911476211,
+          "second": 615.523911476211,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "mae_meters",
+          "first": 223.2560040683574,
+          "second": 223.2560040683574,
+          "relative_difference": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "model": "lstm_baseline",
+      "status_first": "ok",
+      "status_second": "ok",
+      "status_match": true,
+      "metrics": [
+        {
+          "metric": "ade_meters",
+          "first": 69926.434155866,
+          "second": 69926.434155866,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "fde_meters",
+          "first": 67654.13467973549,
+          "second": 67654.13467973549,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "rmse_meters",
+          "first": 233702.26477598527,
+          "second": 233702.26477598527,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "mae_meters",
+          "first": 42058.4212331303,
+          "second": 42058.4212331303,
+          "relative_difference": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "model": "transformer_baseline",
+      "status_first": "ok",
+      "status_second": "ok",
+      "status_match": true,
+      "metrics": [
+        {
+          "metric": "ade_meters",
+          "first": 81626.71890193506,
+          "second": 81626.71890193506,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "fde_meters",
+          "first": 80757.47687569055,
+          "second": 80757.47687569055,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "rmse_meters",
+          "first": 131464.729295995,
+          "second": 131464.729295995,
+          "relative_difference": 0.0,
+          "passed": true
+        },
+        {
+          "metric": "mae_meters",
+          "first": 48620.143788508605,
+          "second": 48620.143788508605,
+          "relative_difference": 0.0,
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "created_at": "2026-05-16T12:56:00.854645+00:00",
+  "status": "pass",
+  "error_count": 0,
+  "checks": [
+    {
+      "name": "file exists: configs/experiment_conservative.yaml",
+      "passed": true,
+      "severity": "error",
+      "evidence": "configs/experiment_conservative.yaml"
+    },
+    {
+      "name": "file exists: requirements.txt",
+      "passed": true,
+      "severity": "error",
+      "evidence": "requirements.txt"
+    },
+    {
+      "name": "file exists: outputs/audit/environment.json",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/audit/environment.json"
+    },
+    {
+      "name": "file exists: outputs/audit/data_manifest.json",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/audit/data_manifest.json"
+    },
+    {
+      "name": "file exists: outputs/audit/feature_schema.json",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/audit/feature_schema.json"
+    },
+    {
+      "name": "file exists: outputs/audit/split_manifest.csv",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/audit/split_manifest.csv"
+    },
+    {
+      "name": "file exists: outputs/audit/git_status.txt",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/audit/git_status.txt"
+    },
+    {
+      "name": "file exists: outputs/audit/run_command.txt",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/audit/run_command.txt"
+    },
+    {
+      "name": "file exists: outputs/final/run_manifest.json",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/run_manifest.json"
+    },
+    {
+      "name": "file exists: outputs/final/model_metrics.csv",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/model_metrics.csv"
+    },
+    {
+      "name": "file exists: outputs/final/per_sample_errors.csv",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/per_sample_errors.csv"
+    },
+    {
+      "name": "file exists: outputs/final/error_summary_by_horizon.csv",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/error_summary_by_horizon.csv"
+    },
+    {
+      "name": "file exists: outputs/final/error_summary_by_group.csv",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/error_summary_by_group.csv"
+    },
+    {
+      "name": "file exists: outputs/final/statistical_tests.json",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/statistical_tests.json"
+    },
+    {
+      "name": "file exists: outputs/final/reproducibility_check.json",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/reproducibility_check.json"
+    },
+    {
+      "name": "file exists: outputs/final/data_quality_report.json",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/data_quality_report.json"
+    },
+    {
+      "name": "file exists: outputs/final/figures/model_ade_bar.png",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/figures/model_ade_bar.png"
+    },
+    {
+      "name": "file exists: outputs/final/figures/error_distributions.png",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/figures/error_distributions.png"
+    },
+    {
+      "name": "file exists: outputs/final/figures/figure_manifest.json",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/figures/figure_manifest.json"
+    },
+    {
+      "name": "file exists: outputs/final/tables/model_metrics.md",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/tables/model_metrics.md"
+    },
+    {
+      "name": "file exists: outputs/final/tables/model_metrics.tex",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/tables/model_metrics.tex"
+    },
+    {
+      "name": "file exists: outputs/final/tables/artifact_checklist.md",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/tables/artifact_checklist.md"
+    },
+    {
+      "name": "file exists: paper/conservative_scope.md",
+      "passed": true,
+      "severity": "error",
+      "evidence": "paper/conservative_scope.md"
+    },
+    {
+      "name": "file exists: paper/conservative_draft.md",
+      "passed": true,
+      "severity": "error",
+      "evidence": "paper/conservative_draft.md"
+    },
+    {
+      "name": "file exists: paper/generated_results_summary.md",
+      "passed": true,
+      "severity": "error",
+      "evidence": "paper/generated_results_summary.md"
+    },
+    {
+      "name": "file exists: paper/conservative_manuscript.md",
+      "passed": true,
+      "severity": "error",
+      "evidence": "paper/conservative_manuscript.md"
+    },
+    {
+      "name": "environment check passes",
+      "passed": true,
+      "severity": "error",
+      "evidence": "[]"
+    },
+    {
+      "name": "processed data checksum recorded",
+      "passed": true,
+      "severity": "error",
+      "evidence": "21c7328861915196c551e85b4b2c9e9ba34441fce41bca7f0b1e3c85e196f8f8"
+    },
+    {
+      "name": "raw data checksum recorded",
+      "passed": true,
+      "severity": "error",
+      "evidence": "['c7ed5be12c89720652b029782a65d0641fc64de58e556b3150c70e3512b84bae']"
+    },
+    {
+      "name": "raw data record and vessel counts are profiled",
+      "passed": true,
+      "severity": "error",
+      "evidence": "[{'records': 7295616, 'unique_mmsi': 15130}]"
+    },
+    {
+      "name": "coordinate units are inferred and configured consistently",
+      "passed": true,
+      "severity": "error",
+      "evidence": "inferred=degrees_latlon_wgs84, configured=degrees_latlon_wgs84"
+    },
+    {
+      "name": "data manifest warnings are empty",
+      "passed": true,
+      "severity": "error",
+      "evidence": "[]"
+    },
+    {
+      "name": "run is not a debug sample-cap run",
+      "passed": true,
+      "severity": "error",
+      "evidence": "is_debug_run=False"
+    },
+    {
+      "name": "metric unit is verified Haversine meters",
+      "passed": true,
+      "severity": "error",
+      "evidence": "{'coordinate_units': 'degrees_latlon_wgs84', 'metric_distance': 'haversine_meters', 'unit_verified': True, 'notes': ''}"
+    },
+    {
+      "name": "same-seed metric stability check passes",
+      "passed": true,
+      "severity": "error",
+      "evidence": "pass"
+    },
+    {
+      "name": "all configured final models appear in model_metrics.csv",
+      "passed": true,
+      "severity": "error",
+      "evidence": "configured=['constant_velocity', 'linear_lstsq', 'lstm_baseline', 'transformer_baseline'], present=['constant_velocity', 'linear_lstsq', 'lstm_baseline', 'transformer_baseline']"
+    },
+    {
+      "name": "constant_velocity completed successfully",
+      "passed": true,
+      "severity": "error",
+      "evidence": "{'model': 'constant_velocity', 'status': 'ok', 'ade_meters': '306.5470334627461', 'fde_meters': '659.5750679121155', 'rmse_meters': '691.5849346411763', 'mae_meters': '195.59882594651788', 'n_train': '43216', 'n_test': '9262', 'forecast_steps': '15', 'metric_unit': 'haversine_meters', 'unit_verified': 'True', 'train_seconds': '0.0', 'inference_seconds': '0.0016551017761230469', 'notes': ''}"
+    },
+    {
+      "name": "constant_velocity has positive finite metrics",
+      "passed": true,
+      "severity": "error",
+      "evidence": "[306.5470334627461, 659.5750679121155, 691.5849346411763, 195.59882594651788]"
+    },
+    {
+      "name": "constant_velocity has training log",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/training_logs/constant_velocity.json"
+    },
+    {
+      "name": "linear_lstsq completed successfully",
+      "passed": true,
+      "severity": "error",
+      "evidence": "{'model': 'linear_lstsq', 'status': 'ok', 'ade_meters': '351.62295408203056', 'fde_meters': '749.9748783407442', 'rmse_meters': '615.523911476211', 'mae_meters': '223.2560040683574', 'n_train': '43216', 'n_test': '9262', 'forecast_steps': '15', 'metric_unit': 'haversine_meters', 'unit_verified': 'True', 'train_seconds': '0.1360180377960205', 'inference_seconds': '0.006459236145019531', 'notes': ''}"
+    },
+    {
+      "name": "linear_lstsq has positive finite metrics",
+      "passed": true,
+      "severity": "error",
+      "evidence": "[351.62295408203056, 749.9748783407442, 615.523911476211, 223.2560040683574]"
+    },
+    {
+      "name": "linear_lstsq checkpoint exists",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/checkpoints/linear_lstsq.npz"
+    },
+    {
+      "name": "lstm_baseline completed successfully",
+      "passed": true,
+      "severity": "error",
+      "evidence": "{'model': 'lstm_baseline', 'status': 'ok', 'ade_meters': '69926.434155866', 'fde_meters': '67654.13467973549', 'rmse_meters': '233702.26477598527', 'mae_meters': '42058.4212331303', 'n_train': '43216', 'n_test': '9262', 'forecast_steps': '15', 'metric_unit': 'haversine_meters', 'unit_verified': 'True', 'train_seconds': '16.813938856124878', 'inference_seconds': '0.21209716796875', 'notes': ''}"
+    },
+    {
+      "name": "lstm_baseline has positive finite metrics",
+      "passed": true,
+      "severity": "error",
+      "evidence": "[69926.434155866, 67654.13467973549, 233702.26477598527, 42058.4212331303]"
+    },
+    {
+      "name": "lstm_baseline checkpoint exists",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/checkpoints/lstm_baseline.pt"
+    },
+    {
+      "name": "transformer_baseline completed successfully",
+      "passed": true,
+      "severity": "error",
+      "evidence": "{'model': 'transformer_baseline', 'status': 'ok', 'ade_meters': '81626.71890193506', 'fde_meters': '80757.47687569055', 'rmse_meters': '131464.729295995', 'mae_meters': '48620.143788508605', 'n_train': '43216', 'n_test': '9262', 'forecast_steps': '15', 'metric_unit': 'haversine_meters', 'unit_verified': 'True', 'train_seconds': '25.63956356048584', 'inference_seconds': '0.2701301574707031', 'notes': ''}"
+    },
+    {
+      "name": "transformer_baseline has positive finite metrics",
+      "passed": true,
+      "severity": "error",
+      "evidence": "[81626.71890193506, 80757.47687569055, 131464.729295995, 48620.143788508605]"
+    },
+    {
+      "name": "transformer_baseline checkpoint exists",
+      "passed": true,
+      "severity": "error",
+      "evidence": "outputs/final/checkpoints/transformer_baseline.pt"
+    },
+    {
+      "name": "constant_velocity has per-sample errors for every test sample",
+      "passed": true,
+      "severity": "error",
+      "evidence": "count=9262, expected=9262"
+    },
+    {
+      "name": "linear_lstsq has per-sample errors for every test sample",
+      "passed": true,
+      "severity": "error",
+      "evidence": "count=9262, expected=9262"
+    },
+    {
+      "name": "lstm_baseline has per-sample errors for every test sample",
+      "passed": true,
+      "severity": "error",
+      "evidence": "count=9262, expected=9262"
+    },
+    {
+      "name": "transformer_baseline has per-sample errors for every test sample",
+      "passed": true,
+      "severity": "error",
+      "evidence": "count=9262, expected=9262"
+    },
+    {
+      "name": "constant_velocity has horizon metrics for every forecast step",
+      "passed": true,
+      "severity": "error",
+      "evidence": "count=15, expected=15"
+    },
+    {
+      "name": "linear_lstsq has horizon metrics for every forecast step",
+      "passed": true,
+      "severity": "error",
+      "evidence": "count=15, expected=15"
+    },
+    {
+      "name": "lstm_baseline has horizon metrics for every forecast step",
+      "passed": true,
+      "severity": "error",
+      "evidence": "count=15, expected=15"
+    },
+    {
+      "name": "transformer_baseline has horizon metrics for every forecast step",
+      "passed": true,
+      "severity": "error",
+      "evidence": "count=15, expected=15"
+    },
+    {
+      "name": "group summary exists for all final models",
+      "passed": true,
+      "severity": "error",
+      "evidence": "present=['constant_velocity', 'linear_lstsq', 'lstm_baseline', 'transformer_baseline']"
+    },
+    {
+      "name": "statistical summary covers all final models",
+      "passed": true,
+      "severity": "error",
+      "evidence": "present=['constant_velocity', 'linear_lstsq', 'lstm_baseline', 'transformer_baseline']"
+    },
+    {
+      "name": "paired tests cover non-reference final models",
+      "passed": true,
+      "severity": "error",
+      "evidence": "expected=['linear_lstsq', 'lstm_baseline', 'transformer_baseline'], present=['linear_lstsq', 'lstm_baseline', 'transformer_baseline']"
+    },
+    {
+      "name": "generated paper summary has no debug warning",
+      "passed": true,
+      "severity": "error",
+      "evidence": "paper/generated_results_summary.md"
+    },
+    {
+      "name": "unsupported headline claims are not in generated summary",
+      "passed": true,
+      "severity": "error",
+      "evidence": "paper/generated_results_summary.md"
+    },
+    {
+      "name": "generated manuscript has no TODO placeholders",
+      "passed": true,
+      "severity": "error",
+      "evidence": "paper/conservative_manuscript.md"
+    },
+    {
+      "name": "unsupported headline claims are not in generated manuscript",
+      "passed": true,
+      "severity": "error",
+      "evidence": "paper/conservative_manuscript.md"
+    },
+    {
+      "name": "conservative draft entry has no TODO placeholders",
+      "passed": true,
+      "severity": "error",
+      "evidence": "paper/conservative_draft.md"
+    }
+  ]
+}

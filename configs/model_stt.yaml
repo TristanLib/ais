@@ -1,0 +1,79 @@
+# Spatio-Temporal Transformer (STT) model configuration
+model:
+  name: "TrajSTT"
+
+  # Architecture
+  architecture:
+    d_input: 5          # lat, lon, sog, cog_sin, cog_cos
+    d_model: 128        # transformer hidden dimension
+    n_heads: 8          # multi-head attention
+    n_layers: 4         # spatio-temporal blocks
+    d_ff: 512          # feed-forward dimension
+    dropout: 0.1
+
+    # Spatial parameters
+    max_distance: 100.0 # maximum distance for spatial normalization (nautical miles)
+
+    # Multi-ship support
+    max_ships: 1        # single ship by default, can be increased for multi-ship scenarios
+
+    # Output
+    forecast_steps: 30   # T = 30 time steps
+    output_dim: 2        # lat, lon predictions
+
+  # Training
+  training:
+    batch_size: 48      # medium batch size for STT
+    learning_rate: 3e-4
+    weight_decay: 1e-5
+    max_epochs: 100
+    early_stopping_patience: 10
+
+    # Optimizer
+    optimizer: "adamw"
+    scheduler: "cosine"
+    warmup_epochs: 8
+
+    # Loss function
+    loss_type: "smooth_l1"
+    step_weights: "linear"
+
+    # STT-specific regularization
+    spatial_consistency_weight: 0.01
+    temporal_smoothness_weight: 0.005
+
+  # Mixed precision training
+  use_amp: true
+
+  # Gradient clipping for stability
+  gradient_clip_val: 1.0
+
+  # Checkpointing
+  save_top_k: 3
+  monitor_metric: "val_ade"
+  monitor_mode: "min"
+
+# Data augmentation
+augmentation:
+  enabled: true
+  noise_std: 0.001     # moderate noise
+  time_shift_max: 4    # time shift augmentation
+  dropout_rate: 0.03   # temporal dropout
+
+  # Spatial augmentation
+  spatial_jitter_std: 0.001  # small spatial jittering
+  rotation_angle_max: 5.0    # max rotation in degrees
+
+# Spatio-temporal specific settings
+spatiotemporal:
+  # Attention mechanisms
+  temporal_attention_type: "full"    # full, causal, or local
+  spatial_attention_type: "distance_weighted"  # full or distance_weighted
+
+  # Multi-scale processing
+  use_multiscale: false
+  scales: [1, 2, 4]  # temporal scales
+
+  # Positional encoding
+  temporal_pos_encoding: "learned"   # sinusoidal or learned
+  spatial_pos_encoding: "learned"    # learned spatial embedding

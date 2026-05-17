@@ -1,0 +1,106 @@
+# Physics-Informed Neural Network (PINN) model configuration
+model:
+  name: "TrajPINN"
+
+  # Architecture
+  architecture:
+    d_input: 5          # lat, lon, sog, cog_sin, cog_cos
+    hidden_dims: [256, 256, 128]  # fully connected layers
+    dropout: 0.1
+
+    # Physics parameters
+    dt: 1.0             # time step in minutes
+    use_physics: true   # enable physics constraints
+
+    # Output
+    forecast_steps: 30   # T = 30 time steps
+    output_dim: 2        # lat, lon predictions
+
+  # Training
+  training:
+    batch_size: 64      # standard batch size
+    learning_rate: 1e-3
+    weight_decay: 1e-4
+    max_epochs: 150     # longer training for physics convergence
+    early_stopping_patience: 15
+
+    # Optimizer
+    optimizer: "adam"
+    scheduler: "step"
+    step_size: 30
+    gamma: 0.5
+
+    # Loss function
+    loss_type: "mse"    # MSE works well with physics constraints
+
+  # Physics constraints weights
+  physics_weights:
+    kinematic: 1.0      # kinematic consistency (v = dp/dt)
+    acceleration: 0.5   # acceleration limits
+    turning: 0.3        # turn rate limits
+    speed: 0.2          # speed range constraints
+    continuity: 0.4     # trajectory smoothness
+
+  # Physics weight scheduling
+  physics_scheduling:
+    enable: true
+    schedule_type: "linear"  # linear, exponential, cosine
+    warmup_epochs: 20        # gradually increase physics weights
+    max_weight_multiplier: 2.0
+
+  # Mixed precision training
+  use_amp: false      # disable AMP for physics calculations
+
+  # Checkpointing
+  save_top_k: 2
+  monitor_metric: "val_ade"
+  monitor_mode: "min"
+
+# Physical constraints configuration
+physics:
+  # Ship motion limits
+  max_acceleration: 0.1    # nautical miles per minute squared
+  max_turn_rate: 5.0       # degrees per minute
+  max_speed: 30.0          # knots
+  min_speed: 0.0           # knots
+
+  # Environmental constraints
+  water_depth_limit: null  # minimum water depth (not used currently)
+  current_influence: false # account for ocean currents (future feature)
+
+# Data augmentation (conservative for physics)
+augmentation:
+  enabled: true
+  noise_std: 0.0005   # very small noise to preserve physics
+  time_shift_max: 2   # minimal time shift
+  dropout_rate: 0.01  # minimal dropout
+
+  # Physics-aware augmentation
+  velocity_noise_std: 0.001  # small velocity perturbation
+  preserve_physics: true     # ensure augmentation respects physics
+
+# Training strategy for physics-informed learning
+training_strategy:
+  # Curriculum learning
+  use_curriculum: true
+  curriculum_stages:
+    - stage: 1
+      epochs: 30
+      physics_weight: 0.1    # start with low physics weight
+      data_weight: 1.0
+    - stage: 2
+      epochs: 60
+      physics_weight: 0.5    # medium physics weight
+      data_weight: 1.0
+    - stage: 3
+      epochs: 60
+      physics_weight: 1.0    # full physics weight
+      data_weight: 1.0
+
+  # Adaptive learning
+  adaptive_physics_weights: true
+  physics_loss_threshold: 0.01    # adjust weights if physics loss is too high
+
+  # Validation strategy
+  validate_physics: true          # validate physics constraints separately
+  physics_validation_weight: 0.3  # weight for physics terms in validation
