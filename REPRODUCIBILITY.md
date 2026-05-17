@@ -32,8 +32,29 @@ Smoke-test outputs are not manuscript evidence.
 
 ## High-Quality / JON Evidence Pipeline
 
-After downloading the NOAA AIS source files listed in
-`DATA_AVAILABILITY.md` into `data/raw/`, run:
+The high-quality pipeline can download the planned NOAA AIS source dates before
+building the processed dataset. This is the closest equivalent to a data
+installation step:
+
+```bash
+PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
+bash scripts/run_high_quality_pipeline.sh
+```
+
+By default this uses the `planned_dates` in
+`configs/experiment_multiday.yaml`. To reproduce the current JON candidate
+explicitly, use:
+
+```bash
+PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
+DATES="2024-01-02 2024-01-09 2024-02-06 2024-03-05" \
+bash scripts/run_high_quality_pipeline.sh
+```
+
+If the raw files are already present under `data/raw/`, the same pipeline can
+be run without re-downloading:
 
 ```bash
 PYTHON_BIN=.venv/bin/python bash scripts/run_high_quality_pipeline.sh
@@ -43,6 +64,7 @@ Infrastructure-only smoke test:
 
 ```bash
 PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
 MAX_ROWS_PER_FILE=1000000 \
 MAX_TRAIN_SAMPLES=512 \
 MAX_TEST_SAMPLES=128 \

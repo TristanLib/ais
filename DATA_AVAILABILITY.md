@@ -34,6 +34,30 @@ These files are reproducible or downloadable, but they are too large for a
 clean source repository. A future archival release can place selected large
 artifacts in GitHub Releases, Zenodo, OSF, or another data repository.
 
+## Data Installation
+
+The repository includes downloader/preparation code. To download the planned
+NOAA AIS dates and run the high-quality/JON evidence pipeline:
+
+```bash
+PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
+bash scripts/run_high_quality_pipeline.sh
+```
+
+For an explicit reproduction of the current candidate:
+
+```bash
+PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
+DATES="2024-01-02 2024-01-09 2024-02-06 2024-03-05" \
+bash scripts/run_high_quality_pipeline.sh
+```
+
+The download implementation lives in `scripts/build_multiday_dataset.py`; it
+uses the NOAA URL template and `planned_dates` recorded in
+`configs/experiment_multiday.yaml`.
+
 ## Evidence Included in Git
 
 The repository keeps compact evidence artifacts that support the manuscript
@@ -49,5 +73,6 @@ claims:
 
 ## Reproducibility Note
 
-To fully regenerate the evidence package, download the required NOAA AIS files
-into `data/raw/`, then run the commands in `REPRODUCIBILITY.md`.
+To fully regenerate the evidence package, use the data installation command
+above or place the required NOAA AIS files in `data/raw/`, then run the commands
+in `REPRODUCIBILITY.md`.

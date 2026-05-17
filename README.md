@@ -251,13 +251,20 @@ The conservative evidence pack is reproducible with `PYTHON_BIN=.venv/bin/python
 The higher-bar journal roadmap is reproducible as an extended pipeline:
 
 ```bash
-PYTHON_BIN=.venv/bin/python bash scripts/run_high_quality_pipeline.sh
+PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
+bash scripts/run_high_quality_pipeline.sh
 ```
+
+`DOWNLOAD_DATES=true` downloads the NOAA AIS dates listed in
+`configs/experiment_multiday.yaml` before building the processed dataset. If
+the raw files are already present in `data/raw/`, omit that variable.
 
 For infrastructure checks only, cap the data and training sizes:
 
 ```bash
 PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
 MAX_ROWS_PER_FILE=1000000 \
 MAX_TRAIN_SAMPLES=512 \
 MAX_TEST_SAMPLES=128 \
