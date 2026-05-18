@@ -1,0 +1,992 @@
+[
+  {
+    "index": 1,
+    "entry": "Bai, S., Kolter, J. Z. and Koltun, V. (2018). An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling. arXiv:1803.01271.",
+    "matches": [
+      {
+        "score": 33.59331,
+        "title": "Convolutional Neural Networks with Recurrent Neural Filters",
+        "container": "Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing",
+        "year": 2018,
+        "doi": "10.18653/v1/d18-1109",
+        "type": "proceedings-article",
+        "author": "Yang"
+      },
+      {
+        "score": 32.631535,
+        "title": "Modeling chromatin state from sequence across angiosperms using recurrent convolutional neural networks",
+        "container": "",
+        "year": 2021,
+        "doi": "10.1101/2021.11.11.468292",
+        "type": "posted-content",
+        "author": "Wrightsman / Marand / Crisp"
+      },
+      {
+        "score": 32.370125,
+        "title": "Making Convolutional Networks Recurrent for Visual Sequence Learning",
+        "container": "2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+        "year": 2018,
+        "doi": "10.1109/cvpr.2018.00677",
+        "type": "proceedings-article",
+        "author": "Yang / Molchanov / Kautz"
+      }
+    ]
+  },
+  {
+    "index": 2,
+    "entry": "Bergstra, J. and Bengio, Y. (2012). Random Search for Hyper-Parameter Optimization. Journal of Machine Learning Research, 13, 281-305.",
+    "matches": [
+      {
+        "score": 46.438362,
+        "title": "AutoCRM—An Automated Customer Relationship Management Learning System with Random Search Hyper‐Parameter Optimization",
+        "container": "Automated Machine Learning and Industrial Applications",
+        "year": 2025,
+        "doi": "10.1002/9781394272426.ch6",
+        "type": "other",
+        "author": "Rajeswari / Gomathi"
+      },
+      {
+        "score": 36.432926,
+        "title": "181Chapter 9 Hyper-parameter Optimization for Machine Learning",
+        "container": "Computational Optimization",
+        "year": 2025,
+        "doi": "10.1515/9783112219430-009",
+        "type": "book-chapter",
+        "author": "Singh / Dogra / Cheetu"
+      },
+      {
+        "score": 35.750828,
+        "title": "Hyper-parameter optimization for enhanced machine learning-based landslide susceptibility mapping",
+        "container": "Environmental Science and Pollution Research",
+        "year": 2025,
+        "doi": "10.1007/s11356-025-36615-w",
+        "type": "journal-article",
+        "author": "Ado / Amitab"
+      }
+    ]
+  },
+  {
+    "index": 3,
+    "entry": "Cho, K., van Merrienboer, B., Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H. and Bengio, Y. (2014). Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation. Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing, 1724-1734.",
+    "matches": [
+      {
+        "score": 192.07964,
+        "title": "Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation",
+        "container": "Proceedings of the 2014 Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+        "year": 2014,
+        "doi": "10.3115/v1/d14-1179",
+        "type": "proceedings-article",
+        "author": "Cho / van Merrienboer / Gulcehre"
+      },
+      {
+        "score": 93.476654,
+        "title": "On the Properties of Neural Machine Translation: Encoder–Decoder Approaches",
+        "container": "Proceedings of SSST-8, Eighth Workshop on Syntax, Semantics and Structure in Statistical Translation",
+        "year": 2014,
+        "doi": "10.3115/v1/w14-4012",
+        "type": "proceedings-article",
+        "author": "Cho / van Merrienboer / Bahdanau"
+      },
+      {
+        "score": 74.448654,
+        "title": "Overcoming the Curse of Sentence Length for Neural Machine Translation using Automatic Segmentation",
+        "container": "Proceedings of SSST-8, Eighth Workshop on Syntax, Semantics and Structure in Statistical Translation",
+        "year": 2014,
+        "doi": "10.3115/v1/w14-4009",
+        "type": "proceedings-article",
+        "author": "Pouget-Abadie / Bahdanau / van Merrienboer"
+      }
+    ]
+  },
+  {
+    "index": 4,
+    "entry": "Dalsnes, B. R., Hexeberg, S., Flaten, A. L., Eriksen, B. O. H. and Brekke, E. F. (2018). The Neighbour Course Distribution Method with Gaussian Mixture Models for AIS-Based Vessel Trajectory Prediction. Proceedings of the 21st International Conference on Information Fusion.",
+    "matches": [
+      {
+        "score": 149.6995,
+        "title": "The Neighbor Course Distribution Method with Gaussian Mixture Models for AIS-Based Vessel Trajectory Prediction",
+        "container": "2018 21st International Conference on Information Fusion (FUSION)",
+        "year": 2018,
+        "doi": "10.23919/icif.2018.8455607",
+        "type": "proceedings-article",
+        "author": "Dalsnes / Hexeberg / Flaten"
+      },
+      {
+        "score": 105.40664,
+        "title": "AIS-based vessel trajectory prediction",
+        "container": "2017 20th International Conference on Information Fusion (Fusion)",
+        "year": 2017,
+        "doi": "10.23919/icif.2017.8009762",
+        "type": "proceedings-article",
+        "author": "Hexeberg / Flaten / Eriksen"
+      },
+      {
+        "score": 56.171364,
+        "title": "Incorporating Navigation Context into Inland Vessel Trajectory Prediction: A Gaussian Mixture Model and Transformer Approach",
+        "container": "2024 27th International Conference on Information Fusion (FUSION)",
+        "year": 2024,
+        "doi": "10.23919/fusion59988.2024.10706281",
+        "type": "proceedings-article",
+        "author": "Donandt / Söffker"
+      }
+    ]
+  },
+  {
+    "index": 5,
+    "entry": "Demsar, J. (2006). Statistical Comparisons of Classifiers over Multiple Data Sets. Journal of Machine Learning Research, 7, 1-30.",
+    "matches": [
+      {
+        "score": 45.36573,
+        "title": "Multiple Machine Learning Comparisons of HIV Cell-based and Reverse Transcriptase Data Sets",
+        "container": "",
+        "year": 2020,
+        "doi": "10.1021/acs.molpharmaceut.8b01297.s001",
+        "type": "component",
+        "author": ""
+      },
+      {
+        "score": 38.623528,
+        "title": "Support vector machine classifiers for large data sets.",
+        "container": "",
+        "year": 2006,
+        "doi": "10.2172/881587",
+        "type": "report",
+        "author": "Gertz / Griffin"
+      },
+      {
+        "score": 37.907455,
+        "title": "Machine Learning Classifiers for Tornado Detection: Sensitivity Analysis on Tornado Data Sets",
+        "container": "Intelligent Engineering Systems through Artificial Neural Networks, Volume 16",
+        "year": 2006,
+        "doi": "10.1115/1.802566.paper101",
+        "type": "book-chapter",
+        "author": ""
+      }
+    ]
+  },
+  {
+    "index": 6,
+    "entry": "Endsley, M. R. (1995). Toward a Theory of Situation Awareness in Dynamic Systems. Human Factors, 37, 32-64.",
+    "matches": [
+      {
+        "score": 78.53412,
+        "title": "Toward a Theory of Situation Awareness in Dynamic Systems",
+        "container": "Human Factors: The Journal of the Human Factors and Ergonomics Society",
+        "year": 1995,
+        "doi": "10.1518/001872095779049543",
+        "type": "journal-article",
+        "author": "Endsley"
+      },
+      {
+        "score": 59.789787,
+        "title": "Toward a Theory of Situation Awareness in Dynamic Systems",
+        "container": "Human Error in Aviation",
+        "year": 2017,
+        "doi": "10.4324/9781315092898-13",
+        "type": "book-chapter",
+        "author": "Endsley"
+      },
+      {
+        "score": 59.750202,
+        "title": "Measurement of Situation Awareness in Dynamic Systems",
+        "container": "Human Factors: The Journal of the Human Factors and Ergonomics Society",
+        "year": 1995,
+        "doi": "10.1518/001872095779049499",
+        "type": "journal-article",
+        "author": "Endsley"
+      }
+    ]
+  },
+  {
+    "index": 7,
+    "entry": "Fujii, Y. and Tanaka, K. (1971). Traffic Capacity. The Journal of Navigation, 24, 543-552.",
+    "matches": [
+      {
+        "score": 73.91726,
+        "title": "Traffic Capacity",
+        "container": "Journal of Navigation",
+        "year": 1971,
+        "doi": "10.1017/s0373463300022384",
+        "type": "journal-article",
+        "author": "Fujii / Tanaka"
+      },
+      {
+        "score": 48.429726,
+        "title": "The Analysis of Traffic Accidents",
+        "container": "Journal of Navigation",
+        "year": 1971,
+        "doi": "10.1017/s0373463300022372",
+        "type": "journal-article",
+        "author": "Fujii / Shiobara"
+      },
+      {
+        "score": 42.651352,
+        "title": "Marine Traffic Engineering",
+        "container": "Journal of Navigation",
+        "year": 1971,
+        "doi": "10.1017/s0373463300047755",
+        "type": "journal-article",
+        "author": "Toyoda / Fujii"
+      }
+    ]
+  },
+  {
+    "index": 8,
+    "entry": "Goodwin, E. M. (1975). A Statistical Study of Ship Domains. The Journal of Navigation, 28, 328-344.",
+    "matches": [
+      {
+        "score": 76.52822,
+        "title": "A Statistical Study of Ship Domains",
+        "container": "Journal of Navigation",
+        "year": 1975,
+        "doi": "10.1017/s0373463300041230",
+        "type": "journal-article",
+        "author": "Goodwin"
+      },
+      {
+        "score": 47.88322,
+        "title": "A Statistical Study of Ship Domains",
+        "container": "Journal of Navigation",
+        "year": 1973,
+        "doi": "10.1017/s0373463300022992",
+        "type": "journal-article",
+        "author": "Goodwin"
+      },
+      {
+        "score": 33.934803,
+        "title": "Ship Speed Measurement",
+        "container": "Journal of Navigation",
+        "year": 1975,
+        "doi": "10.1017/s0373463300041278",
+        "type": "journal-article",
+        "author": "Robinson"
+      }
+    ]
+  },
+  {
+    "index": 9,
+    "entry": "Hansen, M. G., Jensen, T. K., Lehn-Schioler, T., Melchild, K., Rasmussen, F. M. and Ennemark, F. (2013). Empirical Ship Domain based on AIS Data. The Journal of Navigation, 66, 931-940.",
+    "matches": [
+      {
+        "score": 128.47198,
+        "title": "Empirical Ship Domain based on AIS Data",
+        "container": "Journal of Navigation",
+        "year": 2013,
+        "doi": "10.1017/s0373463313000489",
+        "type": "journal-article",
+        "author": "Hansen / Jensen / Lehn-Schiøler"
+      },
+      {
+        "score": 75.69347,
+        "title": "Free Flow–Efficiency of a One-way Traffic Lane between two Pylons",
+        "container": "Journal of Navigation",
+        "year": 2013,
+        "doi": "10.1017/s0373463313000362",
+        "type": "journal-article",
+        "author": "Jensen / Hansen / Lehn-Schiøler"
+      },
+      {
+        "score": 58.380215,
+        "title": "VTS a risk reducer",
+        "container": "Collision and Grounding of Ships and Offshore Structures",
+        "year": 2013,
+        "doi": "10.1201/b14915-4",
+        "type": "book-chapter",
+        "author": "Lehn-Schiøler / Hansen / Melchild"
+      }
+    ]
+  },
+  {
+    "index": 10,
+    "entry": "Hexeberg, S., Flaten, A. L., Eriksen, B. O. H. and Brekke, E. F. (2017). AIS-Based Vessel Trajectory Prediction. Proceedings of the 20th International Conference on Information Fusion.",
+    "matches": [
+      {
+        "score": 118.15922,
+        "title": "AIS-based vessel trajectory prediction",
+        "container": "2017 20th International Conference on Information Fusion (Fusion)",
+        "year": 2017,
+        "doi": "10.23919/icif.2017.8009762",
+        "type": "proceedings-article",
+        "author": "Hexeberg / Flaten / Eriksen"
+      },
+      {
+        "score": 91.46451,
+        "title": "The Neighbor Course Distribution Method with Gaussian Mixture Models for AIS-Based Vessel Trajectory Prediction",
+        "container": "2018 21st International Conference on Information Fusion (FUSION)",
+        "year": 2018,
+        "doi": "10.23919/icif.2018.8455607",
+        "type": "proceedings-article",
+        "author": "Dalsnes / Hexeberg / Flaten"
+      },
+      {
+        "score": 49.729145,
+        "title": "Unsupervised Clustering of Marine Vessel Trajectories in Historical AIS Database",
+        "container": "2022 25th International Conference on Information Fusion (FUSION)",
+        "year": 2022,
+        "doi": "10.23919/fusion49751.2022.9841274",
+        "type": "proceedings-article",
+        "author": "Jain / Brekke / Rasheed"
+      }
+    ]
+  },
+  {
+    "index": 11,
+    "entry": "Hochreiter, S. and Schmidhuber, J. (1997). Long Short-Term Memory. Neural Computation, 9, 1735-1780.",
+    "matches": [
+      {
+        "score": 96.873405,
+        "title": "Long Short-Term Memory",
+        "container": "Neural Computation",
+        "year": 1997,
+        "doi": "10.1162/neco.1997.9.8.1735",
+        "type": "journal-article",
+        "author": "Hochreiter / Schmidhuber"
+      },
+      {
+        "score": 54.35913,
+        "title": "Flat Minima",
+        "container": "Neural Computation",
+        "year": 1997,
+        "doi": "10.1162/neco.1997.9.1.1",
+        "type": "journal-article",
+        "author": "Hochreiter / Schmidhuber"
+      },
+      {
+        "score": 45.60691,
+        "title": "Feature Extraction Through LOCOCODE",
+        "container": "Neural Computation",
+        "year": 1999,
+        "doi": "10.1162/089976699300016629",
+        "type": "journal-article",
+        "author": "Hochreiter / Schmidhuber"
+      }
+    ]
+  },
+  {
+    "index": 12,
+    "entry": "International Maritime Organization. (1972). Convention on the International Regulations for Preventing Collisions at Sea, 1972 (COLREGs). https://www.imo.org/en/About/Conventions/Pages/COLREG.aspx. Accessed 16 May 2026.",
+    "matches": [
+      {
+        "score": 107.34967,
+        "title": "COLREG",
+        "container": "",
+        "year": 2026,
+        "doi": "10.62454/kc904e",
+        "type": "monograph",
+        "author": ""
+      },
+      {
+        "score": 101.36459,
+        "title": "COLREG",
+        "container": "",
+        "year": 2003,
+        "doi": "10.62454/kb904e",
+        "type": "monograph",
+        "author": ""
+      },
+      {
+        "score": 97.75726,
+        "title": "Convention on the International Regulations for Preventing Collisions at Sea, 1972",
+        "container": "COLREG",
+        "year": 2026,
+        "doi": "10.62454/kc904e_02",
+        "type": "book-chapter",
+        "author": ""
+      }
+    ]
+  },
+  {
+    "index": 13,
+    "entry": "Kalman, R. E. (1960). A New Approach to Linear Filtering and Prediction Problems. Journal of Basic Engineering, 82, 35-45.",
+    "matches": [
+      {
+        "score": 82.724686,
+        "title": "A New Approach to Linear Filtering and Prediction Problems",
+        "container": "Journal of Basic Engineering",
+        "year": 1960,
+        "doi": "10.1115/1.3662552",
+        "type": "journal-article",
+        "author": "Kalman"
+      },
+      {
+        "score": 44.646996,
+        "title": "New Results in Linear Filtering and Prediction Theory",
+        "container": "Journal of Basic Engineering",
+        "year": 1961,
+        "doi": "10.1115/1.3658902",
+        "type": "journal-article",
+        "author": "Kalman / Bucy"
+      },
+      {
+        "score": 42.37144,
+        "title": "A New Approach to Linear Filtering and Prediction Problems",
+        "container": "Control Theory",
+        "year": 2009,
+        "doi": "10.1109/9780470544334.ch9",
+        "type": "book-chapter",
+        "author": ""
+      }
+    ]
+  },
+  {
+    "index": 14,
+    "entry": "Kingma, D. P. and Ba, J. (2015). Adam: A Method for Stochastic Optimization. Proceedings of the International Conference on Learning Representations.",
+    "matches": [
+      {
+        "score": 30.005842,
+        "title": "Learning orthogonal sparse representations by using geodesic flow optimization",
+        "container": "2015 International Joint Conference on Neural Networks (IJCNN)",
+        "year": 2015,
+        "doi": "10.1109/ijcnn.2015.7280651",
+        "type": "proceedings-article",
+        "author": "Schutze / Barth / Martinetz"
+      },
+      {
+        "score": 28.639975,
+        "title": "Stochastic Optimization of Text Set Generation for Learning Multiple Query Intent Representations",
+        "container": "Proceedings of the 31st ACM International Conference on Information &amp; Knowledge Management",
+        "year": 2022,
+        "doi": "10.1145/3511808.3557666",
+        "type": "proceedings-article",
+        "author": "Hashemi / Zamani / Croft"
+      },
+      {
+        "score": 27.886131,
+        "title": "Topic optimization method based on Laplace score",
+        "container": "2015 International Conference on Machine Learning and Cybernetics (ICMLC)",
+        "year": 2015,
+        "doi": "10.1109/icmlc.2015.7340656",
+        "type": "proceedings-article",
+        "author": "Xiao / Ding"
+      }
+    ]
+  },
+  {
+    "index": 15,
+    "entry": "Leek, J. T. and Peng, R. D. (2015). Reproducible Research Can Still Be Wrong: Adopting a Prevention Approach. Proceedings of the National Academy of Sciences, 112, 1645-1646.",
+    "matches": [
+      {
+        "score": 105.016396,
+        "title": "Reproducible research can still be wrong: Adopting a prevention approach",
+        "container": "Proceedings of the National Academy of Sciences",
+        "year": 2015,
+        "doi": "10.1073/pnas.1421412111",
+        "type": "journal-article",
+        "author": "Leek / Peng"
+      },
+      {
+        "score": 35.927273,
+        "title": "Adopting ALK and LTK",
+        "container": "Proceedings of the National Academy of Sciences",
+        "year": 2015,
+        "doi": "10.1073/pnas.1521923113",
+        "type": "journal-article",
+        "author": "Lemke"
+      },
+      {
+        "score": 30.93088,
+        "title": "Reply to Kühne et al.: Still good evidence that people search for meaning when they approach a new decade in chronological age",
+        "container": "Proceedings of the National Academy of Sciences",
+        "year": 2015,
+        "doi": "10.1073/pnas.1500787112",
+        "type": "journal-article",
+        "author": "Alter / Hershfield"
+      }
+    ]
+  },
+  {
+    "index": 16,
+    "entry": "MarineCadastre.gov. (2024). AIS Data. https://marinecadastre.gov/ais/. Accessed 16 May 2026.",
+    "matches": [
+      {
+        "score": 37.783882,
+        "title": "",
+        "container": "AIS: Ars Iuris Salmanticensis",
+        "year": 2024,
+        "doi": "10.14201/ais2024121",
+        "type": "journal-issue",
+        "author": ""
+      },
+      {
+        "score": 37.50493,
+        "title": "",
+        "container": "AIS: Ars Iuris Salmanticensis",
+        "year": 2024,
+        "doi": "10.14201/ais2023112",
+        "type": "journal-issue",
+        "author": ""
+      },
+      {
+        "score": 36.87452,
+        "title": "Descriptor: AIS Signal and Channel Dataset From Tórshavn Harbor and Surrounding Islands (Faroe Islands) (AIS-TSH)",
+        "container": "IEEE Data Descriptions",
+        "year": 2026,
+        "doi": "10.1109/ieeedata.2026.3676933",
+        "type": "journal-article",
+        "author": "Kristmundsson / Svoostein"
+      }
+    ]
+  },
+  {
+    "index": 17,
+    "entry": "Millefiori, L. M., Braca, P., Bryan, K. and Willett, P. (2016). Modeling Vessel Kinematics using a Stochastic Mean-Reverting Process for Long-Term Prediction. IEEE Transactions on Aerospace and Electronic Systems, 52, 2313-2330.",
+    "matches": [
+      {
+        "score": 150.00499,
+        "title": "Modeling vessel kinematics using a stochastic mean-reverting process for long-term prediction",
+        "container": "IEEE Transactions on Aerospace and Electronic Systems",
+        "year": 2016,
+        "doi": "10.1109/taes.2016.150596",
+        "type": "journal-article",
+        "author": "Millefiori / Braca / Bryan"
+      },
+      {
+        "score": 70.16214,
+        "title": "Consistent Estimation of Randomly Sampled Ornstein–Uhlenbeck Process Long-Run Mean for Long-Term Target State Prediction",
+        "container": "IEEE Signal Processing Letters",
+        "year": 2016,
+        "doi": "10.1109/lsp.2016.2605705",
+        "type": "journal-article",
+        "author": "Millefiori / Braca / Willett"
+      },
+      {
+        "score": 69.31442,
+        "title": "Model performance assessment for long-term vessel prediction using HFSW radar data",
+        "container": "2017 IEEE Radar Conference (RadarConf)",
+        "year": 2017,
+        "doi": "10.1109/radar.2017.7944205",
+        "type": "proceedings-article",
+        "author": "Vivone / Millefiori / Braca"
+      }
+    ]
+  },
+  {
+    "index": 18,
+    "entry": "Mou, J. M., van der Tak, C. and Ligteringen, H. (2010). Study on Collision Avoidance in Busy Waterways by using AIS Data. Ocean Engineering, 37, 483-490.",
+    "matches": [
+      {
+        "score": 129.80684,
+        "title": "Study on collision avoidance in busy waterways by using AIS data",
+        "container": "Ocean Engineering",
+        "year": 2010,
+        "doi": "10.1016/j.oceaneng.2010.01.012",
+        "type": "journal-article",
+        "author": "Mou / Tak / Ligteringen"
+      },
+      {
+        "score": 52.181545,
+        "title": "Comparison study on AIS data of ship traffic behavior",
+        "container": "Ocean Engineering",
+        "year": 2015,
+        "doi": "10.1016/j.oceaneng.2014.11.020",
+        "type": "journal-article",
+        "author": "Xiao / Ligteringen / van Gulijk"
+      },
+      {
+        "score": 51.062508,
+        "title": "A novel method for extracting near-misses from AIS data involving collision avoidance behaviour",
+        "container": "Ocean Engineering",
+        "year": 2024,
+        "doi": "10.1016/j.oceaneng.2024.117466",
+        "type": "journal-article",
+        "author": "Zhang / Chen / Rong"
+      }
+    ]
+  },
+  {
+    "index": 19,
+    "entry": "NOAA Office for Coastal Management. (2026). Marine Cadastre. https://www.coast.noaa.gov/digitalcoast/data/marine-cadastre.html. Accessed 16 May 2026.",
+    "matches": [
+      {
+        "score": 58.387135,
+        "title": "Central Valley Spring-Run Chinook Salmon and Ocean Fisheries: Data Availability and Management Possibilities",
+        "container": "San Francisco Estuary and Watershed Science",
+        "year": 2018,
+        "doi": "10.15447/sfews.2018v16iss1/art4",
+        "type": "journal-article",
+        "author": " / Satterthwaite / Cordoleani"
+      },
+      {
+        "score": 53.147797,
+        "title": "NOAA/HUD coastal planning",
+        "container": "Marine Pollution Bulletin",
+        "year": 1976,
+        "doi": "10.1016/0025-326x(76)90289-7",
+        "type": "journal-article",
+        "author": ""
+      },
+      {
+        "score": 52.04901,
+        "title": "",
+        "container": "Zemleustrojstvo, kadastr i monitoring zemel' (Land management, cadastre and land monitoring)",
+        "year": 2026,
+        "doi": "10.33920/sel-04-2604",
+        "type": "journal-issue",
+        "author": ""
+      }
+    ]
+  },
+  {
+    "index": 20,
+    "entry": "Pallotta, G., Vespe, M. and Bryan, K. (2013). Vessel Pattern Knowledge Discovery from AIS Data: A Framework for Anomaly Detection and Route Prediction. Entropy, 15, 2218-2245.",
+    "matches": [
+      {
+        "score": 144.73059,
+        "title": "Vessel Pattern Knowledge Discovery from AIS Data: A Framework for Anomaly Detection and Route Prediction",
+        "container": "Entropy",
+        "year": 2013,
+        "doi": "10.3390/e15062218",
+        "type": "journal-article",
+        "author": "Pallotta / Vespe / Bryan"
+      },
+      {
+        "score": 56.39595,
+        "title": "Maritime anomaly detection: A review",
+        "container": "WIREs Data Mining and Knowledge Discovery",
+        "year": 2018,
+        "doi": "10.1002/widm.1266",
+        "type": "journal-article",
+        "author": "Riveiro / Pallotta / Vespe"
+      },
+      {
+        "score": 50.861813,
+        "title": "Knowledge-based vessel position prediction using historical AIS data",
+        "container": "2015 Sensor Data Fusion: Trends, Solutions, Applications (SDF)",
+        "year": 2015,
+        "doi": "10.1109/sdf.2015.7347707",
+        "type": "proceedings-article",
+        "author": "Mazzarella / Arguedas / Vespe"
+      }
+    ]
+  },
+  {
+    "index": 21,
+    "entry": "Paszke, A., Gross, S., Massa, F., Lerer, A., Bradbury, J., Chanan, G., Killeen, T., Lin, Z., Gimelshein, N., Antiga, L. and others. (2019). PyTorch: An Imperative Style, High-Performance Deep Learning Library. Advances in Neural Information Processing Systems, 32.",
+    "matches": [
+      {
+        "score": 46.26182,
+        "title": "LibMOON: A Gradient-based MultiObjective OptimizatioN Library in PyTorch",
+        "container": "Advances in Neural Information Processing Systems 37",
+        "year": 2024,
+        "doi": "10.52202/079017-0065",
+        "type": "proceedings-article",
+        "author": "Chen / Lin / Yu"
+      },
+      {
+        "score": 41.223705,
+        "title": "CORL: Research-oriented Deep Offline Reinforcement Learning Library",
+        "container": "Advances in Neural Information Processing Systems 36",
+        "year": 2023,
+        "doi": "10.52202/075280-1351",
+        "type": "proceedings-article",
+        "author": "Akimov / Kolesnikov / Kurenkov"
+      },
+      {
+        "score": 39.38797,
+        "title": "Addressing Spectral Bias of Deep Neural Networks by Multi-Grade Deep Learning",
+        "container": "Advances in Neural Information Processing Systems 37",
+        "year": 2024,
+        "doi": "10.52202/079017-3625",
+        "type": "proceedings-article",
+        "author": "Fang / Xu"
+      }
+    ]
+  },
+  {
+    "index": 22,
+    "entry": "Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel, O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V. and others. (2011). Scikit-learn: Machine Learning in Python. Journal of Machine Learning Research, 12, 2825-2830.",
+    "matches": [
+      {
+        "score": 87.81145,
+        "title": "Machine learning for neuroimaging with scikit-learn",
+        "container": "Frontiers in Neuroinformatics",
+        "year": 2014,
+        "doi": "10.3389/fninf.2014.00014",
+        "type": "journal-article",
+        "author": "Abraham / Pedregosa / Eickenberg"
+      },
+      {
+        "score": 72.93757,
+        "title": "Scikit-learn",
+        "container": "GetMobile: Mobile Computing and Communications",
+        "year": 2015,
+        "doi": "10.1145/2786984.2786995",
+        "type": "journal-article",
+        "author": "Varoquaux / Buitinck / Louppe"
+      },
+      {
+        "score": 67.54119,
+        "title": "Learning to Rank from Medical Imaging Data",
+        "container": "Lecture Notes in Computer Science",
+        "year": 2012,
+        "doi": "10.1007/978-3-642-35428-1_29",
+        "type": "book-chapter",
+        "author": "Pedregosa / Cauvet / Varoquaux"
+      }
+    ]
+  },
+  {
+    "index": 23,
+    "entry": "Pineau, J., Vincent-Lamarre, P., Sinha, K., Lariviere, V., Beygelzimer, A., d'Alche-Buc, F., Fox, E. and Larochelle, H. (2021). Improving Reproducibility in Machine Learning Research. Journal of Machine Learning Research, 22, 1-20.",
+    "matches": [
+      {
+        "score": 45.018208,
+        "title": "Improving Reproducibility in Machine Learning: Overview, Barriers, and Drivers",
+        "container": "",
+        "year": 2026,
+        "doi": "10.36227/techrxiv.177155769.94899097/v1",
+        "type": "posted-content",
+        "author": "Mzyece"
+      },
+      {
+        "score": 43.862247,
+        "title": "Elizabeth Degefe Discusses Research Findings, Improving, and Resources for Future Research Using Machine Learning to Study Racism",
+        "container": "Studying Racism Using Machine Learning",
+        "year": 2023,
+        "doi": "10.4135/9781529666786.n4",
+        "type": "book-chapter",
+        "author": ""
+      },
+      {
+        "score": 42.629295,
+        "title": "Tutorial summary: Reductions in machine learning",
+        "container": "Proceedings of the 26th Annual International Conference on Machine Learning",
+        "year": 2009,
+        "doi": "10.1145/1553374.1553552",
+        "type": "proceedings-article",
+        "author": "Beygelzimer / Langford / Zadrozny"
+      }
+    ]
+  },
+  {
+    "index": 24,
+    "entry": "Ristic, B., La Scala, B., Morelande, M. and Gordon, N. (2008). Statistical Analysis of Motion Patterns in AIS Data: Anomaly Detection and Motion Prediction. Proceedings of the 11th International Conference on Information Fusion.",
+    "matches": [
+      {
+        "score": 53.5962,
+        "title": "Learning Motion Patterns in AIS Data and Detecting Anomalous Vessel Behavior",
+        "container": "2021 IEEE 24th International Conference on Information Fusion (FUSION)",
+        "year": 2021,
+        "doi": "10.23919/fusion49465.2021.9627027",
+        "type": "proceedings-article",
+        "author": "Kullberg / Skog / Hendeby"
+      },
+      {
+        "score": 51.366394,
+        "title": "Detection and parameter estimation of multiple radioactive sources",
+        "container": "2007 10th International Conference on Information Fusion",
+        "year": 2007,
+        "doi": "10.1109/icif.2007.4408094",
+        "type": "proceedings-article",
+        "author": "Morelande / Ristic / Gunatilaka"
+      },
+      {
+        "score": 49.360184,
+        "title": "Target motion analysis with unknown measurement noise variance",
+        "container": "2017 20th International Conference on Information Fusion (Fusion)",
+        "year": 2017,
+        "doi": "10.23919/icif.2017.8009853",
+        "type": "proceedings-article",
+        "author": "Ristic / Wang / Arulampalam"
+      }
+    ]
+  },
+  {
+    "index": 25,
+    "entry": "Sculley, D., Holt, G., Golovin, D., Davydov, E., Phillips, T., Ebner, D., Chaudhary, V., Young, M., Crespo, J. F. and Dennison, D. (2015). Hidden Technical Debt in Machine Learning Systems. Advances in Neural Information Processing Systems, 28.",
+    "matches": [
+      {
+        "score": 47.96542,
+        "title": "Ad click prediction",
+        "container": "Proceedings of the 19th ACM SIGKDD international conference on Knowledge discovery and data mining",
+        "year": 2013,
+        "doi": "10.1145/2487575.2488200",
+        "type": "proceedings-article",
+        "author": "McMahan / Holt / Sculley"
+      },
+      {
+        "score": 45.328102,
+        "title": "Automatically Learning Hybrid Digital Twins of Dynamical Systems",
+        "container": "Advances in Neural Information Processing Systems 37",
+        "year": 2024,
+        "doi": "10.52202/079017-2304",
+        "type": "proceedings-article",
+        "author": "Holt / Liu / van der Schaar"
+      },
+      {
+        "score": 44.95478,
+        "title": "Fuzzy Learning Machine",
+        "container": "Advances in Neural Information Processing Systems 35",
+        "year": 2022,
+        "doi": "10.52202/068431-2659",
+        "type": "proceedings-article",
+        "author": "Cui / Liang"
+      }
+    ]
+  },
+  {
+    "index": 26,
+    "entry": "Statheros, T., Howells, G. and Maier, K. M. (2008). Autonomous Ship Collision Avoidance Navigation Concepts, Technologies and Techniques. The Journal of Navigation, 61, 129-142.",
+    "matches": [
+      {
+        "score": 125.98543,
+        "title": "Autonomous Ship Collision Avoidance Navigation Concepts, Technologies and Techniques",
+        "container": "Journal of Navigation",
+        "year": 2008,
+        "doi": "10.1017/s037346330700447x",
+        "type": "journal-article",
+        "author": "Statheros / Howells / Maier"
+      },
+      {
+        "score": 50.559544,
+        "title": "Autonomous guidance and navigation based on the COLREGs rules and regulations of collision avoidance",
+        "container": "Advanced Ship Design for Pollution Prevention",
+        "year": 2010,
+        "doi": "10.1201/b10565-27",
+        "type": "book-chapter",
+        "author": ""
+      },
+      {
+        "score": 48.53758,
+        "title": "Ship Autonomous Collision Avoidance Decision From the Perspective of Navigation Practice",
+        "container": "",
+        "year": 2024,
+        "doi": "10.2139/ssrn.4694363",
+        "type": "posted-content",
+        "author": "Li / Mou / Chen"
+      }
+    ]
+  },
+  {
+    "index": 27,
+    "entry": "Szlapczynski, R. and Szlapczynska, J. (2017). Review of Ship Safety Domains: Models and Applications. Ocean Engineering, 145, 277-289.",
+    "matches": [
+      {
+        "score": 113.57637,
+        "title": "Review of ship safety domains: Models and applications",
+        "container": "Ocean Engineering",
+        "year": 2017,
+        "doi": "10.1016/j.oceaneng.2017.09.020",
+        "type": "journal-article",
+        "author": "Szlapczynski / Szlapczynska"
+      },
+      {
+        "score": 56.250843,
+        "title": "An analysis of domain-based ship collision risk parameters",
+        "container": "Ocean Engineering",
+        "year": 2016,
+        "doi": "10.1016/j.oceaneng.2016.08.030",
+        "type": "journal-article",
+        "author": "Szlapczynski / Szlapczynska"
+      },
+      {
+        "score": 54.65238,
+        "title": "A method of determining and visualizing safe motion parameters of a ship navigating in restricted waters",
+        "container": "Ocean Engineering",
+        "year": 2017,
+        "doi": "10.1016/j.oceaneng.2016.11.044",
+        "type": "journal-article",
+        "author": "Szlapczynski / Szlapczynska"
+      }
+    ]
+  },
+  {
+    "index": 28,
+    "entry": "Tu, E., Zhang, G., Rachmawati, L., Rajabally, E. and Huang, G. B. (2018). Exploiting AIS Data for Intelligent Maritime Navigation: A Comprehensive Survey from Data to Methodology. IEEE Transactions on Intelligent Transportation Systems, 19, 1559-1582.",
+    "matches": [
+      {
+        "score": 142.31406,
+        "title": "Exploiting AIS Data for Intelligent Maritime Navigation: A Comprehensive Survey From Data to Methodology",
+        "container": "IEEE Transactions on Intelligent Transportation Systems",
+        "year": 2018,
+        "doi": "10.1109/tits.2017.2724551",
+        "type": "journal-article",
+        "author": "Tu / Zhang / Rachmawati"
+      },
+      {
+        "score": 58.79968,
+        "title": "Video Processing From Electro-Optical Sensors for Object Detection and Tracking in a Maritime Environment: A Survey",
+        "container": "IEEE Transactions on Intelligent Transportation Systems",
+        "year": 2017,
+        "doi": "10.1109/tits.2016.2634580",
+        "type": "journal-article",
+        "author": "Prasad / Rajan / Rachmawati"
+      },
+      {
+        "score": 58.17842,
+        "title": "An Automatic Identification System (AIS) Database for Maritime Trajectory Prediction and Data Mining",
+        "container": "Proceedings in Adaptation, Learning and Optimization",
+        "year": 2018,
+        "doi": "10.1007/978-3-319-57421-9_20",
+        "type": "book-chapter",
+        "author": "Mao / Tu / Zhang"
+      }
+    ]
+  },
+  {
+    "index": 29,
+    "entry": "Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L. and Polosukhin, I. (2017). Attention Is All You Need. Advances in Neural Information Processing Systems, 30.",
+    "matches": [
+      {
+        "score": 116.5044,
+        "title": "Attention Is All You Need",
+        "container": "",
+        "year": 2025,
+        "doi": "10.65215/ctdc8e75",
+        "type": "posted-content",
+        "author": "Vaswani / Shazeer / Parmar"
+      },
+      {
+        "score": 116.05151,
+        "title": "Attention Is All You Need",
+        "container": "",
+        "year": 2025,
+        "doi": "10.65215/ysbyhc05",
+        "type": "posted-content",
+        "author": "Vaswani / Shazeer / Parmar"
+      },
+      {
+        "score": 115.694046,
+        "title": "Attention Is All You Need",
+        "container": "",
+        "year": 2025,
+        "doi": "10.65215/mdcm8z23",
+        "type": "posted-content",
+        "author": "Vaswani / Shazeer / Parmar"
+      }
+    ]
+  },
+  {
+    "index": 30,
+    "entry": "Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L. and Teal, T. K. (2017). Good Enough Practices in Scientific Computing. PLOS Computational Biology, 13, e1005510.",
+    "matches": [
+      {
+        "score": 133.00345,
+        "title": "Good enough practices in scientific computing",
+        "container": "PLOS Computational Biology",
+        "year": 2017,
+        "doi": "10.1371/journal.pcbi.1005510",
+        "type": "journal-article",
+        "author": "Wilson / Bryan / Cranston"
+      },
+      {
+        "score": 37.60761,
+        "title": "Correction: When Optimal Feedback Control Is Not Enough: Feedforward Strategies Are Required for Optimal Control with Active Sensing",
+        "container": "PLOS Computational Biology",
+        "year": 2017,
+        "doi": "10.1371/journal.pcbi.1005370",
+        "type": "journal-article",
+        "author": ""
+      },
+      {
+        "score": 37.19807,
+        "title": "Ten quick tips for teaching with participatory live coding",
+        "container": "PLOS Computational Biology",
+        "year": 2020,
+        "doi": "10.1371/journal.pcbi.1008090",
+        "type": "journal-article",
+        "author": "Nederbragt / Harris / Hill"
+      }
+    ]
+  }
+]

@@ -1,312 +1,150 @@
-# The Simplicity Advantage in Maritime Trajectory Prediction
+# A Reproducible AIS Trajectory Prediction Benchmark for Navigation Risk-Warning Support
 
-**Counter-intuitive findings: Simple methods outperform deep learning for short-term ship trajectory prediction**
+This repository contains the code, configurations, generated figures, compact evidence files, and manuscript artifacts for a reproducible AIS trajectory-prediction benchmark prepared for submission to *The Journal of Navigation*.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Paper](https://img.shields.io/badge/Paper-Conservative_Manuscript-green.svg)](paper/conservative_manuscript.md)
+The current public citation tag is:
 
-## 🎯 Key Finding
+`jon-submission-v1.3`
 
-The current conservative publication evidence pack shows that **simple kinematic baselines are strongest under the audited 15-minute AIS trajectory-prediction protocol**, while naive LSTM and Transformer baselines fail badly in the controlled final run:
+## Core Claim
 
-| Method | Average Displacement Error | Performance Gap |
-|--------|---------------------------|----------------|
-| **Constant Velocity** | **306.5 m** | **1.0× (Best)** |
-| Linear Least Squares | 351.6 m | 1.1× |
-| LSTM baseline | 69,926.4 m | 228× |
-| Transformer baseline | 81,626.7 m | 266× |
+Short-horizon AIS trajectory prediction should be evaluated with strong simple baselines, auditable split definitions, and downstream navigation-warning metrics. In the current four-date NOAA AIS benchmark, a Kalman-style constant-velocity baseline is the strongest mean-ADE model under both temporal and vessel-disjoint holdouts. The documented neural sequence baselines do not outperform the strongest motion baselines under this protocol.
 
-## 🚢 Dataset
+This is not an autonomous collision-avoidance validation. The risk-warning component is an AIS-derived CPA/TCPA decision-support evaluation.
 
-- **Source**: Real NOAA AIS data from January 2, 2024
-- **Audited processed split**: 43,216 train / 9,260 validation / 9,262 test trajectory samples
-- **Coverage**: US coastal waters
-- **Features in final NPZ**: WGS84 latitude/longitude, speed over ground, and course sine/cosine
-- **Evidence manifest**: `outputs/audit/data_manifest.json`
+## Current Results
 
-## 🔬 Methodology
+### Trajectory Prediction
 
-### Models Tested
-1. **Constant Velocity (CV)**: Simple linear extrapolation
-2. **Linear Least Squares**: Flattened-history regression baseline
-3. **LSTM baseline**: Conservative recurrent baseline
-4. **Transformer baseline**: Conservative attention baseline
+| Split | Best mean-ADE model | ADE (m) | FDE (m) |
+|---|---|---:|---:|
+| Temporal holdout | Kalman-CV | 1,759.7 | 2,704.5 |
+| Vessel-disjoint holdout | Kalman-CV | 3,109.4 | 5,979.6 |
 
-### Evaluation
-- **Metric**: ADE/FDE in Haversine meters; RMSE/MAE in local north/east component meters
-- **Prediction horizon**: 15 minutes
-- **Input sequence**: 30 minutes of historical data
-- **Test set**: 9,262 trajectory sequences
-- **Readiness audit**: `outputs/final/publication_readiness_report.json` reports `status=pass`
+Representative baselines:
 
-## 📊 Results
+| Split | Model | ADE (m) | Median ADE (m) |
+|---|---|---:|---:|
+| Temporal holdout | CV | 2,751.3 | 20.5 |
+| Temporal holdout | Ridge | 3,141.7 | 1,563.1 |
+| Temporal holdout | Transformer | 56,310.7 | 35,643.0 |
+| Vessel-disjoint holdout | CV | 9,553.5 | 22.8 |
+| Vessel-disjoint holdout | Ridge | 3,446.9 | 1,277.5 |
+| Vessel-disjoint holdout | Transformer | 47,559.1 | 33,691.0 |
 
-### Performance Visualization
-![Performance Comparison](outputs/final/figures/model_ade_bar.png)
+### Risk-Warning Evaluation
 
-### Key Insights
-1. **Simple methods win in the audited run**: CV baseline achieves 306.5 m ADE.
-2. **Naive deep baselines fail under the conservative protocol**: LSTM and Transformer errors are orders of magnitude larger than CV.
-3. **Metric hygiene matters**: final metrics use verified WGS84 coordinates and Haversine/local-component meters.
-4. **Practical implication**: the project currently supports a reproducibility/benchmark cautionary paper, not a deep-learning superiority paper.
+The risk-warning slice contains 2,000 AIS-derived encounter scenarios. With a 0.5 nautical-mile warning threshold, Kalman-CV reaches:
 
-## 🚀 Quick Start
+- Precision: 0.963
+- Recall: 0.900
+- False-alarm rate: 0.012
+- Missed-warning rate: 0.100
+- Mean absolute CPA error: 0.092 nmi
 
-### Conservative Publication Workflow
+## Dataset
 
-The current publication direction is documented in
-[`PUBLICATION_IMPLEMENTATION_PLAN.md`](PUBLICATION_IMPLEMENTATION_PLAN.md), with the current publishability assessment in
-[`PUBLICATION_CURRENT_STATUS.md`](PUBLICATION_CURRENT_STATUS.md). A higher-bar journal roadmap is in
-[`HIGH_QUALITY_JOURNAL_ROADMAP.md`](HIGH_QUALITY_JOURNAL_ROADMAP.md). The active submission target is now **The Journal of Navigation**, with the working roadmap in
-[`JOURNAL_OF_NAVIGATION_SUBMISSION_ROADMAP.md`](JOURNAL_OF_NAVIGATION_SUBMISSION_ROADMAP.md). This route keeps the paper conservative: only claims regenerated by repository artifacts under `outputs/final/`, `outputs/audit/`, or the audited high-quality outputs should appear in the manuscript.
+The evidence package is generated from public NOAA MarineCadastre.gov historical AIS data:
+
+- Source dates: 2024-01-02, 2024-01-09, 2024-02-06, 2024-03-05
+- Processed trajectory windows: 186,326
+- Unique MMSI values: 7,425
+- Input sequence: 30 one-minute history points
+- Forecast horizon: 15 one-minute future positions
+- Metrics: Haversine ADE/FDE and local north/east RMSE/MAE in metres
+
+The repository intentionally does not redistribute raw NOAA AIS files, processed NumPy arrays, large per-sample error CSV files, model checkpoints, or local environments.
+
+## Submission Artifacts
+
+The current Journal of Navigation package is in `paper/`:
+
+- `paper/jon_manuscript.md`
+- `paper/jon_manuscript.docx`
+- `paper/jon_manuscript.pdf`
+- `paper/jon_supplementary_materials.md`
+- `paper/jon_supplementary_materials.zip`
+- `paper/jon_cover_letter.md`
+- `paper/jon_scholarone_metadata.md`
+- `paper/jon_submission_checklist.md`
+
+The manuscript includes author metadata for Li Bo, China Maritime Service Center, the no-specific-grant funding statement, no-competing-interests declaration, author-contribution statement, acknowledgement, and AI-use declaration.
+
+## Reproduce the Evidence Package
+
+Create an environment and install dependencies:
 
 ```bash
-# Create a fresh environment, then install dependencies
 python3.11 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-
-# Run auditable environment, data, model, statistics, and paper-table steps
-PYTHON_BIN=.venv/bin/python bash scripts/run_final_experiment.sh
 ```
 
-For quick infrastructure checks only, add sample caps:
+Regenerate the current high-quality/JON evidence pipeline:
 
 ```bash
-PYTHON_BIN=.venv/bin/python bash scripts/run_final_experiment.sh --max-train-samples 1000 --max-test-samples 100
+PYTHON_BIN=.venv/bin/python \
+DOWNLOAD_DATES=true \
+DATES="2024-01-02 2024-01-09 2024-02-06 2024-03-05" \
+bash scripts/run_high_quality_pipeline.sh
 ```
 
-Publication numbers should only be cited when `outputs/final/run_manifest.json` records `"is_debug_run": false`. The generated manuscript tables and summaries are written to:
-
-- `outputs/final/tables/model_metrics.md`
-- `outputs/final/tables/model_metrics.tex`
-- `outputs/final/figures/model_ade_bar.png`
-- `outputs/final/figures/error_distributions.png`
-- `paper/generated_results_summary.md`
-- `paper/conservative_manuscript.md`
-- `outputs/final/publication_readiness_report.json`
-
-Current JON, high-quality, and domestic-journal manuscript candidates are:
-
-- `paper/jon_manuscript.md`: The Journal of Navigation manuscript candidate
-  generated from the current evidence pack.
-- `paper/jon_manuscript.docx`: Word upload candidate for initial submission.
-- `paper/jon_manuscript.pdf`: 15-page A4 review draft with embedded figures.
-- `paper/jon_manuscript_zh.md`: Chinese working version of the JON manuscript.
-- `paper/jon_manuscript_zh.docx`: Chinese Word export.
-- `paper/jon_manuscript_zh.pdf`: Chinese A4 PDF export with embedded figures.
-- `paper/jon_manuscript_zh_interpretation.md`: Chinese reader-facing
-  interpretation of the paper's purpose, result, evidence boundary, and
-  practical meaning.
-- `paper/jon_manuscript_zh_interpretation.pdf`: PDF export of the Chinese
-  interpretation.
-- `paper/jon_cover_letter.md`: cover letter draft.
-- `paper/jon_submission_checklist.md`: ScholarOne-oriented checklist.
-- `paper/jon_authorial_polish_workflow.md`: mandatory authorial
-  polish/de-template workflow for removing generated-report flavour while
-  preserving required AI-use disclosure.
-- `paper/jon_supplementary_materials.zip`: compact supplementary evidence
-  archive, currently about 0.31 MB.
-- `outputs/final_submission/jon_submission_manifest.json`: JON package
-  generation manifest and claim boundary.
-- `paper/submission_manuscript.md`: English evidence-synchronized candidate.
-- `paper/submission_manuscript.pdf`: PDF export of the English candidate.
-- `JOURNAL_OF_NAVIGATION_SUBMISSION_ROADMAP.md`: active JON route and remaining
-  human submission tasks.
-- `paper/submission_manuscript_zh.md`: Chinese domestic-journal-style
-  candidate draft.
-- `paper/submission_manuscript_zh.pdf`: A4 Chinese PDF export with embedded
-  Chinese-capable font.
-- `outputs/final_submission/readiness_report.json`: high-quality readiness
-  audit, currently expected to report `submission_ready_candidate` and no
-  blocking gaps before these outputs are cited.
-- `outputs/final_submission/chinese_submission_manifest.json`: Chinese draft
-  generation manifest.
-
-Regenerate the JON package with:
+Regenerate the JON manuscript package from existing evidence files:
 
 ```bash
 .venv/bin/python scripts/make_jon_submission_pack.py
 pandoc --resource-path=paper paper/jon_manuscript.md -o paper/jon_manuscript.docx
-pandoc --resource-path=paper paper/jon_manuscript_zh.md -o paper/jon_manuscript_zh.docx
-pandoc --resource-path=paper paper/jon_manuscript_zh_interpretation.md -o paper/jon_manuscript_zh_interpretation.docx
-/Users/yuebao/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
-  scripts/export_markdown_pdf.py \
-  --input paper/jon_manuscript.md \
-  --output paper/jon_manuscript.pdf \
-  --page-size a4 \
-  --orientation portrait \
-  --serif \
-  --margin-inch 1.0
-/Users/yuebao/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
-  scripts/export_markdown_pdf.py \
-  --input paper/jon_manuscript_zh.md \
-  --output paper/jon_manuscript_zh.pdf \
-  --page-size a4 \
-  --orientation portrait \
-  --cjk \
-  --margin-inch 0.65
-/Users/yuebao/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
-  scripts/export_markdown_pdf.py \
-  --input paper/jon_manuscript_zh_interpretation.md \
-  --output paper/jon_manuscript_zh_interpretation.pdf \
-  --page-size a4 \
-  --orientation portrait \
-  --cjk \
-  --margin-inch 0.65
 ```
 
-The underlying evidence pack is:
+Smoke tests may use smaller caps, but capped runs are not paper evidence. Submission claims should be tied to `outputs/final_submission/readiness_report.json` reporting `overall_status=submission_ready_candidate` and no `blocking_gaps`.
 
-- `outputs/final/model_metrics.csv`
-- `outputs/final/per_sample_errors.csv`
-- `outputs/final/error_summary_by_horizon.csv`
-- `outputs/final/error_summary_by_group.csv`
-- `outputs/final/statistical_tests.json`
-- `outputs/final/reproducibility_check.json`
-- `outputs/final/data_quality_report.json`
-- `outputs/audit/data_manifest.json`
-- `outputs/audit/environment.json`
+## Evidence Files
 
-The processed NOAA arrays use WGS84 latitude/longitude coordinates, and the conservative runner reports ADE/FDE/RMSE/MAE in meters using Haversine/local-component distance calculations.
+Important compact evidence files include:
 
-### Prerequisites
-```bash
-python 3.11
-torch 2.12.0
-numpy 2.4.5
-pandas 3.0.3
-scikit-learn 1.8.0
+- `outputs/audit/multiday_data_manifest.json`
+- `outputs/audit/split_policy.json`
+- `outputs/final_multiday/model_metrics.csv`
+- `outputs/final_multiday/generalization_metrics.csv`
+- `outputs/final_multiday/error_summary_by_horizon.csv`
+- `outputs/final_multiday/error_summary_by_group.csv`
+- `outputs/final_multiday/statistical_tests.json`
+- `outputs/final_multiday/neural_tuning_protocol.json`
+- `outputs/final_multiday/neural_tuning_results.csv`
+- `outputs/final_risk/risk_metrics.json`
+- `outputs/final_risk/risk_scenarios.csv`
+- `outputs/final_submission/readiness_report.json`
+- `outputs/final_submission/jon_submission_manifest.json`
+
+## Project Structure
+
+```text
+├── configs/                  # Experiment configuration files
+├── data/                     # Data notes; raw/processed AIS files are excluded
+├── outputs/audit/            # Dataset and split manifests
+├── outputs/final_multiday/   # Compact trajectory benchmark evidence
+├── outputs/final_risk/       # CPA/TCPA risk-warning evidence
+├── outputs/final_submission/ # Readiness and submission manifests
+├── paper/                    # Manuscript, figures, checklist, supplementary files
+├── scripts/                  # Rebuild, evaluation, and manuscript-generation scripts
+└── src/                      # Data, feature, model, risk, and avoidance modules
 ```
 
-### Run Demo
-```bash
-# Clone repository
-git clone [repository-url]
-cd ship-prediction-avoidance
+## Citation
 
-# Install dependencies
-python3.11 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-
-# Run demonstration
-python demo_simple.py
-```
-
-### Legacy Full Pipeline
-```bash
-# Legacy exploration path, not the publication evidence path
-./run_with_real_data.sh
-```
-
-## 📑 Academic Paper
-
-Current conservative manuscript: [`paper/conservative_manuscript.md`](paper/conservative_manuscript.md)
-
-**Title**: *A Reproducible Evaluation of Simple and Deep Learning Baselines for Short-Term Vessel Trajectory Prediction from AIS Data*
-
-**Current evidence-backed abstract summary**: The audited final run uses 7,295,616 AIS records from 15,130 vessels to produce 43,216 training, 9,260 validation, and 9,262 test trajectory samples. Constant Velocity reaches 306.5 m ADE, Linear Least Squares reaches 351.6 m ADE, and the conservative LSTM/Transformer baselines fail with 69,926.4 m and 81,626.7 m ADE, respectively. The paper is framed as a reproducible benchmark and cautionary result, not as a deep-learning superiority claim.
-
-## 🔍 Detailed Analysis
-
-- **Publication readiness audit**: [publication_readiness_report.json](outputs/final/publication_readiness_report.json)
-- **Statistical Analysis**: [statistical_tests.json](outputs/final/statistical_tests.json)
-- **Metric stability**: [reproducibility_check.json](outputs/final/reproducibility_check.json)
-- **Data audit**: [data_manifest.json](outputs/audit/data_manifest.json)
-- **Model Comparison**: [model_metrics.csv](outputs/final/model_metrics.csv)
-
-## 📁 Project Structure
-
-```
-├── src/                    # Core source code
-│   ├── models/            # Model implementations
-│   ├── dataio/            # Data processing
-│   └── eval/              # Evaluation metrics
-├── data/                  # Datasets
-├── outputs/               # Results and analysis
-│   ├── models/           # Trained models
-│   ├── figures/          # Visualizations
-│   ├── audit/            # Environment and data manifests
-│   └── final/            # Publication evidence pack
-├── paper/                # Generated conservative manuscript
-├── configs/              # Configuration files
-└── scripts/              # Training scripts
-```
-
-## 🎯 Impact
-
-This research challenges the assumption that complexity automatically improves maritime trajectory prediction. Current supported implications:
-
-- **Maritime Benchmarking**: Kinematic baselines must be treated as serious competitors
-- **Operational Efficiency**: Lower computational requirements
-- **AI Research**: Importance of metric hygiene, split documentation, and failure reporting
-- **Practical Deployment**: Avoid relying on neural trajectory predictors without auditable evidence
-
-## 📊 Reproducibility
-
-The conservative evidence pack is reproducible with `PYTHON_BIN=.venv/bin/python bash scripts/run_final_experiment.sh`. Results include data checksums, per-sample errors, paired statistical tests, same-seed metric stability checks, generated tables/figures, and a readiness audit.
-
-The higher-bar journal roadmap is reproducible as an extended pipeline:
-
-```bash
-PYTHON_BIN=.venv/bin/python \
-DOWNLOAD_DATES=true \
-bash scripts/run_high_quality_pipeline.sh
-```
-
-`DOWNLOAD_DATES=true` downloads the NOAA AIS dates listed in
-`configs/experiment_multiday.yaml` before building the processed dataset. If
-the raw files are already present in `data/raw/`, omit that variable.
-
-For infrastructure checks only, cap the data and training sizes:
-
-```bash
-PYTHON_BIN=.venv/bin/python \
-DOWNLOAD_DATES=true \
-MAX_ROWS_PER_FILE=1000000 \
-MAX_TRAIN_SAMPLES=512 \
-MAX_TEST_SAMPLES=128 \
-bash scripts/run_high_quality_pipeline.sh
-```
-
-Those capped results are smoke tests, not paper numbers. High-quality journal
-claims require `outputs/final_submission/readiness_report.json` to report
-`overall_status=submission_ready_candidate` and no `blocking_gaps`.
-
-Current high-quality candidate artifacts include a four-date stratified
-time-block NOAA AIS dataset, non-debug temporal and vessel-disjoint benchmarks,
-neural proxy-tuning records, AIS-derived risk-warning metrics, and
-`paper/jon_manuscript.md`. The current headline result is conservative:
-`kalman_filter_cv` is best by ADE on both temporal holdout (1759.7 m) and
-vessel-disjoint holdout (3109.4 m), while neural models do not support an
-architecture-superiority claim.
-
-## 🤝 Contributing
-
-Contributions welcome! Please see our analysis methodology and contact us for collaboration opportunities.
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) file for details.
-
-## 📞 Citation
+Until a separate DOI is minted, cite the stable GitHub tag:
 
 ```bibtex
-@article{maritime_simplicity_2024,
-  title={A Reproducible Evaluation of Simple and Deep Learning Baselines for Short-Term Vessel Trajectory Prediction from AIS Data},
-  author={[Authors]},
-  journal={To be selected},
-  year={2026},
-  note={Conservative reproducibility and benchmark manuscript with audited AIS evidence pack}
+@misc{li_ais_navigation_benchmark_2026,
+  title        = {A Reproducible AIS Trajectory Prediction Benchmark for Navigation Risk-Warning Support},
+  author       = {Li, Bo},
+  year         = {2026},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/TristanLib/ais},
+  note         = {Tag: jon-submission-v1.3}
 }
 ```
 
-## 📈 Key Takeaway
+## License
 
-**The current supported result is conservative:** under the audited protocol, Constant Velocity is strongest by ADE, while naive LSTM and Transformer baselines fail badly. Stronger deep-learning or collision-avoidance claims require new archived evidence.
-
----
-
-⭐ **Star this repository if you found our counter-intuitive findings interesting!**
+MIT License. See `LICENSE`.

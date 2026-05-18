@@ -1,0 +1,607 @@
+{
+  "created_at": "2026-05-18T03:14:09.191081+00:00",
+  "overall_status": "pass",
+  "checks": [
+    {
+      "name": "file exists: paper/jon_manuscript.md",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 49409
+      }
+    },
+    {
+      "name": "file exists: paper/jon_manuscript.docx",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 804580
+      }
+    },
+    {
+      "name": "file exists: paper/jon_manuscript.pdf",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 1226245
+      }
+    },
+    {
+      "name": "file exists: paper/jon_manuscript_zh.md",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 23610
+      }
+    },
+    {
+      "name": "file exists: paper/jon_manuscript_zh.docx",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 796436
+      }
+    },
+    {
+      "name": "file exists: paper/jon_manuscript_zh.pdf",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 1448921
+      }
+    },
+    {
+      "name": "file exists: paper/jon_cover_letter.md",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 1942
+      }
+    },
+    {
+      "name": "file exists: paper/jon_submission_checklist.md",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 3206
+      }
+    },
+    {
+      "name": "file exists: paper/jon_scholarone_metadata.md",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 3562
+      }
+    },
+    {
+      "name": "file exists: paper/jon_reference_audit.md",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 3900
+      }
+    },
+    {
+      "name": "file exists: paper/jon_submission_guide_zh.md",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 3823
+      }
+    },
+    {
+      "name": "file exists: paper/jon_supplementary_materials.md",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 4179
+      }
+    },
+    {
+      "name": "file exists: paper/jon_supplementary_materials.zip",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 326376
+      }
+    },
+    {
+      "name": "file exists: outputs/final_submission/jon_submission_manifest.json",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 2734
+      }
+    },
+    {
+      "name": "file exists: outputs/final_submission/readiness_report.json",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 9749
+      }
+    },
+    {
+      "name": "file exists: paper/references.bib",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_bytes": 9851
+      }
+    },
+    {
+      "name": "main manuscript word count within JON target band",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "word_count": 6418,
+        "target": "6000-8000"
+      }
+    },
+    {
+      "name": "abstract around 150 words",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "abstract_words": 135
+      }
+    },
+    {
+      "name": "short title under 40 characters",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "short_title": "AIS Benchmark for Risk Warning",
+        "characters": 30
+      }
+    },
+    {
+      "name": "no obvious author/funding/submission placeholders remain",
+      "passed": true,
+      "severity": "required",
+      "evidence": []
+    },
+    {
+      "name": "unsupported headline claims absent",
+      "passed": true,
+      "severity": "required",
+      "evidence": []
+    },
+    {
+      "name": "numeric/text claim present: sample count",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "186,326",
+        "scope": "both"
+      }
+    },
+    {
+      "name": "numeric/text claim present: MMSI count",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "7,425",
+        "scope": "both"
+      }
+    },
+    {
+      "name": "numeric/text claim present: source date Jan 2",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "2024-01-02",
+        "scope": "manuscript"
+      }
+    },
+    {
+      "name": "numeric/text claim present: source date Jan 9",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "2024-01-09",
+        "scope": "manuscript"
+      }
+    },
+    {
+      "name": "numeric/text claim present: source date Feb 6",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "2024-02-06",
+        "scope": "manuscript"
+      }
+    },
+    {
+      "name": "numeric/text claim present: source date Mar 5",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "2024-03-05",
+        "scope": "manuscript"
+      }
+    },
+    {
+      "name": "metric claim matches evidence: temporal Kalman ADE",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "1,759.7"
+      }
+    },
+    {
+      "name": "metric claim matches evidence: vessel Kalman ADE",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "3,109.4"
+      }
+    },
+    {
+      "name": "metric claim matches evidence: temporal CV ADE",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "2,751.3"
+      }
+    },
+    {
+      "name": "metric claim matches evidence: vessel CV ADE",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "9,553.5"
+      }
+    },
+    {
+      "name": "metric claim matches evidence: vessel Ridge ADE",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "3,446.9"
+      }
+    },
+    {
+      "name": "metric claim matches evidence: temporal Transformer ADE",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "56,310.7"
+      }
+    },
+    {
+      "name": "risk claim matches evidence: Kalman risk precision",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "0.963",
+        "scope": "both"
+      }
+    },
+    {
+      "name": "risk claim matches evidence: Kalman risk recall",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "0.900",
+        "scope": "both"
+      }
+    },
+    {
+      "name": "risk claim matches evidence: Kalman false alarm",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "0.012",
+        "scope": "manuscript"
+      }
+    },
+    {
+      "name": "risk claim matches evidence: Kalman missed warning",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "0.100",
+        "scope": "manuscript"
+      }
+    },
+    {
+      "name": "risk claim matches evidence: risk scenario count",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "2,000",
+        "scope": "both"
+      }
+    },
+    {
+      "name": "run manifest is non-debug",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "is_debug_run": false
+      }
+    },
+    {
+      "name": "readiness report has no blocking gaps",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "overall_status": "submission_ready_candidate",
+        "blocking_gaps": []
+      }
+    },
+    {
+      "name": "all multiday model rows completed",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "rows": 18,
+        "non_ok": []
+      }
+    },
+    {
+      "name": "reference list has 30 entries",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "entries": 30
+      }
+    },
+    {
+      "name": "reference audit has 30 audited rows",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "audit_rows": 30
+      }
+    },
+    {
+      "name": "DOIs/URLs added where available",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "doi_count": 18
+      }
+    },
+    {
+      "name": "ScholarOne metadata contains core submission metadata",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "required_bits": [
+          "Li Bo",
+          "li.bo@cmaritime.com.cn",
+          "jon-submission-v1.3"
+        ]
+      }
+    },
+    {
+      "name": "cover letter contains core submission metadata",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "required_bits": [
+          "Li Bo",
+          "li.bo@cmaritime.com.cn",
+          "jon-submission-v1.3"
+        ]
+      }
+    },
+    {
+      "name": "Chinese submission guide contains core submission metadata",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "required_bits": [
+          "Li Bo",
+          "li.bo@cmaritime.com.cn",
+          "jon-submission-v1.3",
+          "ScholarOne"
+        ]
+      }
+    },
+    {
+      "name": "submission checklist contains core submission metadata",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "required_bits": [
+          "Li Bo",
+          "li.bo@cmaritime.com.cn",
+          "jon-submission-v1.3"
+        ]
+      }
+    },
+    {
+      "name": "main PDF readable text extraction",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "pages": 17,
+        "sample_chars": 48687
+      }
+    },
+    {
+      "name": "main PDF page count within JON review target",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "pages": 17
+      }
+    },
+    {
+      "name": "Chinese PDF readable text extraction",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "pages": 9,
+        "sample_chars": 3187
+      }
+    },
+    {
+      "name": "Chinese interpretation PDF readable text extraction",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "pages": 2,
+        "sample_chars": 1612
+      }
+    },
+    {
+      "name": "DOCX text readable: paper/jon_manuscript.docx",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "paragraphs": 137,
+        "contains_author": true
+      }
+    },
+    {
+      "name": "DOCX text readable: paper/jon_manuscript_zh.docx",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "paragraphs": 106,
+        "contains_author": true
+      }
+    },
+    {
+      "name": "DOCX text readable: paper/jon_manuscript_zh_interpretation.docx",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "paragraphs": 44,
+        "contains_author": false
+      }
+    },
+    {
+      "name": "supplementary zip below 10 MB",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "size_mb": 0.31125640869140625,
+        "entries": [
+          "jon_supplementary_materials.md",
+          "multiday_data_manifest.json",
+          "model_metrics.csv",
+          "generalization_metrics.csv",
+          "error_summary_by_horizon.csv",
+          "error_summary_by_group.csv",
+          "statistical_tests.json",
+          "neural_tuning_protocol.json",
+          "neural_tuning_results.csv",
+          "risk_metrics.json",
+          "risk_scenarios.csv",
+          "readiness_report.json"
+        ]
+      }
+    },
+    {
+      "name": "manifest lists scholarone_metadata_md",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "paper/jon_scholarone_metadata.md"
+      }
+    },
+    {
+      "name": "manifest lists reference_audit_md",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "paper/jon_reference_audit.md"
+      }
+    },
+    {
+      "name": "manifest lists submission_guide_zh_md",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "value": "paper/jon_submission_guide_zh.md"
+      }
+    },
+    {
+      "name": "PDF visual sample render reviewed",
+      "passed": true,
+      "severity": "required",
+      "evidence": {
+        "rendered_pages": [
+          "main page 1",
+          "main page 6",
+          "main page 7",
+          "main page 13",
+          "Chinese page 1"
+        ],
+        "tool": "pdftoppm + image inspection",
+        "result": "no obvious clipping, overlap, missing figures, or blank Chinese text observed"
+      }
+    },
+    {
+      "name": "DOCX visual renderer availability noted",
+      "passed": true,
+      "severity": "informational",
+      "evidence": {
+        "soffice": "not found",
+        "libreoffice": "not found",
+        "fallback": "DOCX text extraction and regenerated PDF visual checks were completed; ScholarOne-generated PDF must still be reviewed after upload"
+      }
+    },
+    {
+      "name": "README aligned with active JON/high-quality route",
+      "passed": true,
+      "severity": "informational",
+      "evidence": {
+        "result": "removed stale headline numbers and updated active evidence paths, manuscript page count, citation guidance, and claim boundary"
+      }
+    }
+  ],
+  "summary": {
+    "passed": 62,
+    "failed": 0,
+    "word_count": 6418,
+    "abstract_words": 135,
+    "main_pdf_pages": 17,
+    "supplementary_zip_mb": 0.31125640869140625,
+    "latest_cleanup_addendum": {
+      "created_at": "2026-05-18T06:55:26Z",
+      "main_text_repository_paths_removed": true,
+      "blocked_patterns_checked": [
+        "outputs/",
+        "scripts/",
+        ".py",
+        "overall_status",
+        "readiness_report",
+        "final_submission",
+        "final_multiday",
+        "final_risk",
+        "audit/"
+      ],
+      "markdown_docx_pdf_matches": 0,
+      "pdf_page_size": "A4 portrait",
+      "ai_review_response": [
+        "Added data representativeness summary.",
+        "Added tail-error diagnostics.",
+        "Expanded CPA/TCPA scenario definition.",
+        "Softened neural-baseline wording.",
+        "Added lead-time error to risk-warning table.",
+        "Simplified AI-use declaration.",
+        "Aligned README with the active JON/high-quality evidence route."
+      ]
+    },
+    "final_content_ai_trace_audit": {
+      "created_at": "2026-05-18T08:34:20Z",
+      "main_text_todo_placeholders": 0,
+      "main_text_local_paths": 0,
+      "main_text_outputs_references": 0,
+      "hype_template_phrase_hits": 0,
+      "unsupported_headline_claims": 0,
+      "minor_fixes": [
+        "Clarified risk-scenario wording.",
+        "Changed data-availability timing from draft to submission.",
+        "Changed cover-letter voice from plural to singular for the sole author."
+      ]
+    }
+  }
+}

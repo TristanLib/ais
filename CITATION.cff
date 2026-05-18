@@ -3,8 +3,11 @@ message: "If you use this repository, please cite the archived release or this s
 title: "A Reproducible AIS Trajectory Prediction Benchmark for Navigation Risk-Warning Support"
 type: software
 authors:
-  - name: "TristanLib"
+  - family-names: "Li"
+    given-names: "Bo"
+    affiliation: "China Maritime Service Center"
 repository-code: "https://github.com/TristanLib/ais"
+version: "jon-submission-v1.3"
 abstract: "Code, configurations, generated figures, and compact evidence artifacts for a reproducible AIS trajectory-prediction and CPA/TCPA risk-warning benchmark."
 keywords:
   - AIS
@@ -13,4 +16,4 @@ keywords:
   - CPA/TCPA
   - reproducible benchmark
 license: MIT
-date-released: 2026-05-17
+date-released: 2026-05-18

@@ -45,7 +45,7 @@ unless the large excluded artifact bundle is restored locally.
 For journal submission, cite a stable release rather than a moving branch:
 
 1. Push this clean repository to GitHub.
-2. Create a version tag such as `jon-submission-v1`.
+2. Create a version tag such as `jon-submission-v1.3`.
 3. Archive that release with Zenodo or a similar service.
 4. Add the resulting DOI and commit hash to the manuscript's Data and Code
    Availability section.

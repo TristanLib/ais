@@ -36,7 +36,7 @@ The active target is now `The Journal of Navigation`; use
 Chinese submission remains a fallback branch.
 
 The clean public GitHub release is at `https://github.com/TristanLib/ais`.
-Current recommended tag is `jon-submission-v1.2`. The public repository intentionally excludes raw NOAA
+Current recommended tag is `jon-submission-v1.3`. The public repository intentionally excludes raw NOAA
 AIS files, processed arrays, checkpoints, large per-sample CSV files, and local
 environments, but it includes the data download/rebuild workflow. For full
 high-quality/JON reproduction from the public repository, use:
@@ -73,16 +73,16 @@ The JON submission-candidate package has been generated. Current JON artifacts:
 - `paper/figures/jon_*.png`
 - `scripts/make_jon_submission_pack.py`
 
-The generated JON manuscript is about 6,152 words, the PDF is a 15-page A4
-review draft with embedded figures, and the supplementary archive is about
-0.31 MB. The Chinese JON working manuscript is about 4,278 CJK characters and
-has both DOCX and PDF exports; the Chinese interpretation note is also exported.
-Treat it as a submission-candidate package, not a completed external
-submission: author names, affiliations, ORCID, funding, acknowledgements,
-competing-interest confirmation, final reference audit, final authorial
-polish/de-template pass, final language edit, ScholarOne metadata, and reviewer
-suggestions still require human completion. Do not remove required AI-use
-disclosure while doing the authorial polish pass.
+The generated JON manuscript is about 6,439 words, the abstract is 135 words,
+the PDF is a 17-page A4 review draft with embedded figures, and the
+supplementary archive is about 0.31 MB. The Chinese JON working manuscript is
+about 4,267 CJK characters and has both DOCX and PDF exports; the Chinese
+interpretation note is also exported. Treat it as a pre-submission package, not
+a completed external submission: ScholarOne registration/login, ORCID if
+available, funding and competing-interest re-confirmation, optional Zenodo DOI,
+suggested-reviewer conflict checks if requested, and the ScholarOne-generated
+PDF proof review still require author action. Do not remove required AI-use
+disclosure during final polishing.
 
 ## Publication Workflow
 

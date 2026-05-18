@@ -71,6 +71,17 @@ claims:
 - Readiness and submission manifests
 - Figure-generation scripts and generated manuscript figures
 
+## Code Citation
+
+The current JON submission-candidate code release is:
+
+- Repository: https://github.com/TristanLib/ais
+- Tag: `jon-submission-v1.3`
+
+No separate archival DOI is available for this release at the time of this
+draft. If a Zenodo, OSF, or equivalent DOI is minted before submission, add it
+to the manuscript Data and Code Availability statement and ScholarOne metadata.
+
 ## Reproducibility Note
 
 To fully regenerate the evidence package, use the data installation command

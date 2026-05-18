@@ -1,12 +1,12 @@
 {
-  "created_at": "2026-05-17T02:48:32.132551+00:00",
+  "created_at": "2026-05-18T09:48:54.134269+00:00",
   "target_journal": "The Journal of Navigation",
   "article_type": "Research Article",
   "readiness_report_status": "submission_ready_candidate",
   "blocking_gaps": [],
-  "word_count_estimate": 6152,
-  "chinese_character_count_estimate": 4278,
-  "supplementary_zip_size_mb": 0.3106880187988281,
+  "word_count_estimate": 6416,
+  "chinese_character_count_estimate": 4262,
+  "supplementary_zip_size_mb": 0.31125640869140625,
   "artifacts": {
     "manuscript_md": "paper/jon_manuscript.md",
     "chinese_manuscript_md": "paper/jon_manuscript_zh.md",
@@ -14,6 +14,9 @@
     "cover_letter_md": "paper/jon_cover_letter.md",
     "checklist_md": "paper/jon_submission_checklist.md",
     "authorial_polish_workflow_md": "paper/jon_authorial_polish_workflow.md",
+    "scholarone_metadata_md": "paper/jon_scholarone_metadata.md",
+    "reference_audit_md": "paper/jon_reference_audit.md",
+    "submission_guide_zh_md": "paper/jon_submission_guide_zh.md",
     "supplementary_md": "paper/jon_supplementary_materials.md",
     "supplementary_zip": "paper/jon_supplementary_materials.zip",
     "figures": {
@@ -42,11 +45,9 @@
     "Does not prove all-day, seasonal, or global generalisation."
   ],
   "human_before_upload": [
-    "Author names, affiliations, ORCID and email.",
-    "Funding and acknowledgements.",
-    "Final competing-interest confirmation.",
-    "Final reference/DOI audit.",
-    "Authorial polish / de-template pass without removing required AI-use disclosure.",
-    "Final language edit and ScholarOne metadata."
+    "Add ORCID in ScholarOne if available.",
+    "Re-check no-specific-funding and no-competing-interests statements for accuracy.",
+    "Create and insert a Zenodo or equivalent DOI if an archival DOI is obtained before submission.",
+    "Review final ScholarOne-generated PDF before clicking submit."
   ]
 }

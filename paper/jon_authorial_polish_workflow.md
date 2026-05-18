@@ -1,6 +1,6 @@
 # Authorial Polish and De-Template Workflow
 
-Generated: 2026-05-17T02:48:32.132551+00:00
+Generated: 2026-05-18T09:48:54.134269+00:00
 
 Purpose: add a mandatory manuscript-polishing step that removes generated-report flavour, repetitive phrasing, and repository-facing wording while preserving research integrity and the required AI-use declaration.
 

@@ -1,6 +1,6 @@
 # Current Publication Status
 
-Updated: 2026-05-17
+Updated: 2026-05-18
 
 ## Bottom Line
 
@@ -9,11 +9,71 @@ roadmap is `JOURNAL_OF_NAVIGATION_SUBMISSION_ROADMAP.md`.
 
 The repository now supports a conservative, evidence-backed manuscript about
 reproducible AIS trajectory-prediction benchmarking. A JON-specific
-submission-candidate package has now been generated from the current evidence
-pack. It is not an external submission yet: author metadata, funding,
-acknowledgements, competing-interest confirmation, final reference audit, final
-language edit, ScholarOne metadata, and optional reviewer suggestions still need
-human completion before upload.
+pre-submission package has now been generated and locally finalized as far as
+the assistant can complete locally. ScholarOne submission has been started, but
+the manuscript has not been finally submitted.
+
+As of 2026-05-18, the package has passed final local QA:
+
+- `paper/jon_final_qa_report.md` and
+  `outputs/final_submission/jon_final_qa_report.json` report
+  `overall_status=pass`.
+- QA result: 61 checks passed, 0 failed.
+- Main manuscript: 6,418 words.
+- Abstract: 135 words.
+- Main review PDF: 17 A4 pages.
+- Supplementary ZIP: about 0.31 MB.
+
+Direct-assist completion already done:
+
+- Author metadata inserted: Li Bo, China Maritime Service Center,
+  `li.bo@cmaritime.com.cn`.
+- Funding statement set to no specific grant.
+- Competing-interest statement set to no competing interests.
+- Acknowledgements drafted to thank the author's family.
+- Author-contribution statement inserted for a single-author paper.
+- Cover letter cleaned and synchronized with the manuscript.
+- Reference DOI/style audit prepared in `paper/jon_reference_audit.md`.
+- British-English wording/style pass completed.
+- ScholarOne copy-paste metadata prepared in
+  `paper/jon_scholarone_metadata.md`.
+- Chinese submission guide prepared in `paper/jon_submission_guide_zh.md`.
+- Public code citation inserted for `https://github.com/TristanLib/ais`,
+  tag `jon-submission-v1.3`.
+- Final content/AI-trace audit completed on 2026-05-18. The main manuscript
+  had no TODO/placeholders, local filesystem paths, `outputs/` references, or
+  unsupported headline claims. Minor wording fixes were applied for a missing
+  risk-scenario phrase, the data-availability "draft" wording, and the
+  single-author cover-letter voice.
+
+Current ScholarOne state as of the latest assisted session:
+
+- The ScholarOne account using `li.bo@cmaritime.com.cn` has been registered and
+  is logged in.
+- Step 1 is complete: article type Research Article, title, abstract and
+  Special Issue = `N/A`.
+- Step 2 is in progress. The current regenerated
+  `paper/jon_manuscript.docx` has been uploaded as `Main Document`.
+  The current `paper/jon_supplementary_materials.zip` has been uploaded as
+  `Supplementary Material (online publication only)`, with "Extract files on
+  upload" left unchecked.
+- The remaining Step 2 action is to confirm the supplementary-material
+  publishing-policy checkbox and click `Save & Continue`.
+
+Remaining items are now mostly author-controlled and online submission tasks:
+
+- Add ORCID in ScholarOne if the author has one.
+- Re-confirm that "no specific funding" and "no competing interests" are true.
+- Optionally create a Zenodo or equivalent archive DOI for the GitHub release
+  and insert it before upload.
+- Review `paper/jon_reference_audit.md`; resolve any bibliographic questions
+  only the author can judge.
+- Add suggested reviewers only after checking conflicts of interest.
+- Confirm the manuscript is original, not under review elsewhere, and approved
+  by the author for submission.
+- Confirm the supplementary-material publishing-policy checkbox, click
+  `Save & Continue`, then review the ScholarOne-generated PDF proof before
+  pressing final submit.
 
 The higher-bar journal route has also been implemented as an artifact-complete
 candidate package. The repository now has a metadata-rich multiday protocol,
@@ -33,9 +93,9 @@ The clean public GitHub repository has been prepared and pushed:
 
 - Repository: <https://github.com/TristanLib/ais>
 - Current recommended public tag for citation/pre-DOI discussion:
-  `jon-submission-v1.2`
-- The exact final commit hash should be copied from the release tag immediately
-  before manuscript upload.
+  `jon-submission-v1.3`
+- Use the tagged release as the stable public citation unless a Zenodo or
+  equivalent DOI is minted before upload.
 
 The repository intentionally does not store raw NOAA AIS files, processed
 `.npz` arrays, per-sample large CSV files, model checkpoints, or virtual
@@ -106,23 +166,28 @@ candidate draft.
 
 The Journal of Navigation candidate artifacts:
 
-- `paper/jon_manuscript.md`: JON-style Research Article candidate, about 6,152
+- `paper/jon_manuscript.md`: JON-style Research Article candidate, about 6,418
   words, generated from the current evidence pack.
 - `paper/jon_manuscript.docx`: Word upload candidate.
-- `paper/jon_manuscript.pdf`: 15-page A4 review PDF with embedded figures.
+- `paper/jon_manuscript.pdf`: 17-page A4 review PDF with embedded figures.
 - `paper/jon_manuscript_zh.md`: Chinese working version of the JON manuscript,
-  about 4,278 CJK characters.
+  about 4,267 CJK characters.
 - `paper/jon_manuscript_zh.docx`: Chinese Word export.
 - `paper/jon_manuscript_zh.pdf`: 9-page A4 Chinese review PDF with embedded
   figures.
 - `paper/jon_manuscript_zh_interpretation.md`: Chinese explanation of the
   paper's purpose, evidence, limitations, and practical meaning.
 - `paper/jon_manuscript_zh_interpretation.pdf`: 2-page A4 PDF explanation.
-- `paper/jon_cover_letter.md`: cover letter draft.
+- `paper/jon_cover_letter.md`: cleaned cover letter candidate.
 - `paper/jon_submission_checklist.md`: ScholarOne-oriented checklist.
 - `paper/jon_authorial_polish_workflow.md`: mandatory authorial
   polish/de-template workflow added to remove generated-report flavour while
   preserving required AI-use disclosure.
+- `paper/jon_scholarone_metadata.md`: copy-paste metadata for the ScholarOne
+  web forms.
+- `paper/jon_reference_audit.md`: reference DOI/style audit.
+- `paper/jon_submission_guide_zh.md`: Chinese step-by-step submission guide.
+- `paper/jon_final_qa_report.md`: final local QA report, currently passing.
 - `paper/jon_supplementary_materials.md`: supplementary note and evidence
   index.
 - `paper/jon_supplementary_materials.zip`: compact supplementary archive,
@@ -130,6 +195,8 @@ The Journal of Navigation candidate artifacts:
 - `paper/figures/jon_*.png`: six JON figures, including protocol, model
   performance, horizon degradation, risk-warning metrics, scenario slices, and
   risk case studies.
+- `outputs/final_submission/jon_final_qa_report.json`: machine-readable final
+  QA result.
 - `outputs/final_submission/jon_submission_manifest.json`: package manifest,
   word-count estimate, source artifacts, and claim boundary.
 - `scripts/make_jon_submission_pack.py`: generation script for the JON package.
@@ -161,12 +228,11 @@ Important interpretation:
 - The English and Chinese drafts are now usable as manuscript starting points,
   not final journal uploads.
 - The JON manuscript has JON-oriented framing, figures, declarations, cover
-  letter, checklist, Chinese working version, Chinese interpretation, and compact
-  supplementary archive, but still has human placeholders that must be resolved
-  before ScholarOne submission.
-- The workflow now includes a required authorial polish/de-template pass before
-  final language editing. This is a style and clarity pass, not removal of
-  disclosure; the AI-use declaration must remain accurate.
+  letter, checklist, ScholarOne metadata, Chinese working version, Chinese
+  interpretation, and compact supplementary archive. Known placeholders have
+  been resolved where the author provided information.
+- Final upload still requires author-controlled confirmations and an online
+  ScholarOne proof review; the AI-use declaration must remain accurate.
 - The Chinese PDF issue where pages appeared blank has been fixed by embedding
   a local Chinese-capable font during PDF export.
 - The current Chinese draft is closer to a domestic journal structure than the
@@ -216,17 +282,24 @@ The core result is now supported by a reproducible pipeline, data audit, per-sam
 - Naive LSTM and Transformer baselines fail dramatically under the current controlled run.
 - The repository provides a reproducible artifact trail for every numerical claim in the generated manuscript.
 
-### Not yet submission-polished
+### Remaining before external submission
 
-Before journal submission, the manuscript still needs:
+Before the external JON submission, the remaining work is not another local
+manuscript-generation pass. It is the author's final judgement and ScholarOne
+submission flow:
 
-- A stronger related-work section with verified citations.
-- Venue-specific formatting and figure/table styling.
-- Author, affiliation, funding, data availability, code availability, conflict-of-interest, and ethics statements.
-- A careful discussion of why the LSTM/Transformer baselines fail and what this means methodologically.
-- A final human pass to improve narrative flow and remove generated-prose roughness.
+- Confirm author identity, ORCID if any, funding, competing interests, and
+  submission originality.
+- Optionally create and insert a Zenodo or equivalent DOI for the public code
+  release.
+- Check suggested reviewers only if ScholarOne asks and only after conflict
+  screening.
+- Upload the Word manuscript and supplementary archive through ScholarOne.
+- Review the ScholarOne-generated PDF proof before final submission.
 
-For a higher-bar journal such as Ocean Engineering or The Journal of Navigation, the current manuscript is probably not enough yet unless positioned very carefully as a reproducibility/benchmark cautionary study. For a more methods/reproducibility-friendly venue or workshop, it is much closer.
+The manuscript remains a candidate submission, not a guarantee of acceptance.
+Its safest framing is the conservative reproducible benchmark/cautionary-result
+position already used in the JON draft.
 
 ## Project Support for Paper Claims
 
@@ -286,10 +359,10 @@ Current active plan:
 2. Use `paper/jon_manuscript.docx` and `paper/jon_manuscript.pdf` as the active
    English submission candidates.
 3. Complete the human submission tasks listed in
-   `paper/jon_submission_checklist.md`: author/affiliation/ORCID metadata,
-   funding, acknowledgements, competing-interest confirmation, reference audit,
-   authorial polish/de-template pass, final language edit, ScholarOne keywords,
-   and proof review.
+   `paper/jon_submission_checklist.md`: ScholarOne account/login, ORCID if
+   available, funding and competing-interest re-confirmation, optional Zenodo
+   DOI, suggested-reviewer conflict checks if needed, ScholarOne keywords, and
+   proof review.
 4. Keep the domestic Chinese manuscript as a fallback branch, not the main
    route.
 
